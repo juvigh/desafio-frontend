@@ -1,0 +1,5 @@
+const CTAMedium = "#29D6E7"
+const PrimaryXdark = "#031F3D"
+const PrimaryDark = "#0C4888"
+const AcessórioUm = "#0C488880"
+const AcessórioDois = "#28ADBA"
