@@ -1,9 +1,9 @@
-const colors = {
-  CTAMedium: "#29D6E7",
+export const colors = {
+  CTA: "#29D6E7",
   PrimaryXdark: "#031F3D",
   PrimaryDark: "#0C4888",
-  AcessorioUm: "#0C488880",
-  AcessorioDois: "#28ADBA",
+  Accessory1: "#0C488880",
+  Accessory2: "#28ADBA",
   NeutralWhite: "#FFFFFF",
   NeutralXlight: "#FDFDFD",
   NeutralLight: "#C5C5C5",
@@ -13,5 +13,3 @@ const colors = {
   FeedbackSuccess: "#2AC084",
   FeedbackError: "#EB5E55",
 };
-
-export default colors
