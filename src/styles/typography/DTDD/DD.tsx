@@ -1,7 +1,7 @@
 import { colors } from "../../colors";
 import { typography } from "../typography";
 
-type DTDDProps = {
+interface DTDDProps {
     children: React.ReactNode;
     weight: "regular" | "bold";
 };
