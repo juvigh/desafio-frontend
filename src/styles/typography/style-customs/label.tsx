@@ -1,7 +1,7 @@
 import { colors } from "../../colors";
 import { typography } from "../typography";
 
-type LLProps = {
+interface LargeLabelProps {
   children: React.ReactNode;
   weight: "regular" | "bold" | "semiBold";
 };
