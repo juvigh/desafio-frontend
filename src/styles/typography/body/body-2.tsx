@@ -1,7 +1,7 @@
 import { colors } from "../../colors";
 import { typography } from "../typography";
 
-type Body2Props = {
+interface Body2Props {
     children: React.ReactNode;
     weight: "regular" | "bold";
 };
