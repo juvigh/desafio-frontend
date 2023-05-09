@@ -6,7 +6,7 @@ interface LargeLabelProps {
   weight: "regular" | "bold" | "semiBold";
 };
 
-export const LL = ({ children, weight }: LLProps) => {
+export const LargeLabel = ({ children, weight }: LargeLabelProps) => {
   let fontWeight
   if (weight === "regular") {
     fontWeight = typography.font.weight.regular
@@ -28,7 +28,7 @@ export const LL = ({ children, weight }: LLProps) => {
   );
 };
 
-export const ML = ({ children }: { children: React.ReactNode }) => {
+export const MediumLabel = ({ children }: { children: React.ReactNode }) => {
   return (
     <label
       style={{
@@ -41,6 +41,3 @@ export const ML = ({ children }: { children: React.ReactNode }) => {
     </label>
   );
 };
-
-// LL = Large label
-// ML = Medium label
