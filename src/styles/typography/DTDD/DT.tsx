@@ -7,17 +7,11 @@ type DTDDProps = {
 };
 
 export const DT = ({ children, weight }: DTDDProps) => {
-    let fontWeight
-    if (weight === "regular") {
-        fontWeight = typography.font.weight.regular
-    } else {
-        fontWeight = typography.font.weight.bold
-    }
     return (
         <dt
             style={{
                 fontSize: typography.font.size.medium,
-                fontWeight: fontWeight,
+                fontWeight: typography.font.weight[weight === "regular" ? "regular" : "bold"],
                 color: colors.NeutralXdark,
             }}
         >
