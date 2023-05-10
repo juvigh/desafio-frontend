@@ -1,5 +1,5 @@
-import { colors } from "../../colors";
-import { typography } from "../typography";
+import { colors } from "../colors";
+import { typography } from "./typography";
 
 interface LargeLabelProps {
   children: React.ReactNode;

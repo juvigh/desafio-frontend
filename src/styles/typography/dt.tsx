@@ -1,23 +1,21 @@
-import { colors } from "../../colors";
-import { typography } from "../typography";
+import { colors } from "../colors";
+import { typography } from "./typography";
 
-interface Body2Props {
+interface DTDDProps {
     children: React.ReactNode;
     weight: "regular" | "bold";
 };
 
-
-
-export const Body2 = ({ children, weight }: Body2Props) => {
+export const DT = ({ children, weight }: DTDDProps) => {
     return (
-        <p
+        <dt
             style={{
-                fontSize: typography.font.size.xLarge,
+                fontSize: typography.font.size.medium,
                 fontWeight: typography.font.weight[weight === "regular" ? "regular" : "bold"],
                 color: colors.NeutralXdark,
             }}
         >
             {children}
-        </p>
+        </dt>
     );
 };
