@@ -12,8 +12,8 @@ export const Body2 = ({ children, weight }: Body2Props) => {
     return (
         <p
             style={{
-                fontSize: typography.font.size.xLarge,
-                fontWeight: typography.font.weight[weight === "regular" ? "regular" : "bold"],
+                fontSize: typography.size.xLarge,
+                fontWeight: typography.weight[weight === "regular" ? "regular" : "bold"],
                 color: colors.NeutralXdark,
             }}
         >

@@ -5,11 +5,11 @@ export const H2 = ({ children }: { children: React.ReactNode }) => {
     return (
         <h2
             style={{
-                fontFamily: typography.font.family.primary,
-                fontSize: typography.font.size.xxLarge,
-                fontWeight: typography.font.weight.regular,
+                fontFamily: typography.family.primary,
+                fontSize: typography.size.xxLarge,
+                fontWeight: typography.weight.regular,
                 color: colors.PrimaryDark,
-                lineHeight: typography.font.lineHeight.medium,
+                lineHeight: typography.lineHeight.medium,
             }}
         >
             {children}

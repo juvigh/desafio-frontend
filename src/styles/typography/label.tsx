@@ -9,16 +9,16 @@ interface LargeLabelProps {
 export const LargeLabel = ({ children, weight }: LargeLabelProps) => {
   let fontWeight
   if (weight === "regular") {
-    fontWeight = typography.font.weight.regular
+    fontWeight = typography.weight.regular
   } else if (weight === "bold") {
-    fontWeight = typography.font.weight.bold
+    fontWeight = typography.weight.bold
   } else {
-    fontWeight = typography.font.weight.semiBold;
+    fontWeight = typography.weight.semiBold;
   }
   return (
     <label
       style={{
-        fontSize: typography.font.size.large,
+        fontSize: typography.size.large,
         fontWeight: fontWeight,
         color: colors.PrimaryXdark,
       }}
@@ -32,8 +32,8 @@ export const MediumLabel = ({ children }: { children: React.ReactNode }) => {
   return (
     <label
       style={{
-        fontSize: typography.font.size.medium,
-        fontWeight: typography.font.weight.regular,
+        fontSize: typography.size.medium,
+        fontWeight: typography.weight.regular,
         color: colors.NeutralWhite,
       }}
     >

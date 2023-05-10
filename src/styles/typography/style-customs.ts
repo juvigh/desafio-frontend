@@ -3,24 +3,24 @@ import { typography } from "./typography";
 
 export const customStyles = {
   caption: {
-    size: typography.font.size.small,
-    weight: typography.font.weight.regular,
+    size: typography.size.small,
+    weight: typography.weight.regular,
     color: colors.NeutralXdark,
   },
   prices: {
     bigPrice: {
-      size: typography.font.size.xxxLarge,
-      weight: typography.font.weight.bold,
+      size: typography.size.xxxLarge,
+      weight: typography.weight.bold,
       color: colors.NeutralXdark,
     },
     mediumPrice: {
-      size: typography.font.size.xLarge,
-      weight: typography.font.weight.bold,
+      size: typography.size.xLarge,
+      weight: typography.weight.bold,
       color: colors.NeutralXdark,
     },
     smallPrice: {
-      size: typography.font.size.medium,
-      weight: typography.font.weight.regular,
+      size: typography.size.medium,
+      weight: typography.weight.regular,
       color: colors.NeutralXdark,
     },
   },

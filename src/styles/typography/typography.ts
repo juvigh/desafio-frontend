@@ -1,5 +1,4 @@
 export const typography = {
-  font: {
     family: {
       primary: "Poppins",
     },
@@ -24,5 +23,4 @@ export const typography = {
       medium: 500,
       regular: 400,
     },
-  },
 };
