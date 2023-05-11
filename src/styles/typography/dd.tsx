@@ -10,6 +10,7 @@ export const DD = ({ children, weight }: DTDDProps) => {
   return (
     <dd
       style={{
+        fontFamily: typography.family.primary,
         fontSize: typography.size.medium,
         fontWeight: typography.weight[weight === "regular" ? "regular" : "bold"],
         color: colors.NeutralXdark,

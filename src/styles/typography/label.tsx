@@ -18,6 +18,7 @@ export const LargeLabel = ({ children, weight }: LargeLabelProps) => {
   return (
     <label
       style={{
+        fontFamily: typography.family.primary,
         fontSize: typography.size.large,
         fontWeight: fontWeight,
         color: colors.PrimaryXdark,
@@ -32,6 +33,7 @@ export const MediumLabel = ({ children }: { children: React.ReactNode }) => {
   return (
     <label
       style={{
+        fontFamily: typography.family.primary,
         fontSize: typography.size.medium,
         fontWeight: typography.weight.regular,
         color: colors.NeutralWhite,
