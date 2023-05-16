@@ -1,20 +1,20 @@
 export const typography = {
   family: {
-    primary: "Poppins",
+    primary: 'Poppins',
   },
   lineHeight: {
-    small: "40px",
-    medium: "48px",
-    large: "60px",
+    small: '40px',
+    medium: '48px',
+    large: '60px',
   },
   size: {
-    xxxxLarge: "40px",
-    xxxLarge: "36px",
-    xxLarge: "28px",
-    xLarge: "18px",
-    large: "16px",
-    medium: "14px",
-    small: "12px",
+    xxxxLarge: '40px',
+    xxxLarge: '36px',
+    xxLarge: '28px',
+    xLarge: '18px',
+    large: '16px',
+    medium: '14px',
+    small: '12px',
   },
   weight: {
     extraBold: 800,

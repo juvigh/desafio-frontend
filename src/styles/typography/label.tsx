@@ -1,17 +1,18 @@
-import { colors } from "../colors";
-import { typography } from "./typography";
+import React from 'react';
+import { colors } from '../colors';
+import { typography } from './typography';
 
 interface LargeLabelProps {
   children: React.ReactNode;
-  weight: "regular" | "bold" | "semiBold";
-};
+  weight: 'regular' | 'bold' | 'semiBold';
+}
 
 export const LargeLabel = ({ children, weight }: LargeLabelProps) => {
-  let fontWeight
-  if (weight === "regular") {
-    fontWeight = typography.weight.regular
-  } else if (weight === "bold") {
-    fontWeight = typography.weight.bold
+  let fontWeight;
+  if (weight === 'regular') {
+    fontWeight = typography.weight.regular;
+  } else if (weight === 'bold') {
+    fontWeight = typography.weight.bold;
   } else {
     fontWeight = typography.weight.semiBold;
   }
