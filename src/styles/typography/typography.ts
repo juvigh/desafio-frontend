@@ -23,4 +23,9 @@ export const typography = {
     medium: 500,
     regular: 400,
   },
+  border: {
+    radius: '4px',
+    radiusLarge: '8px',
+    width: '1px',
+  },
 };
