@@ -1,6 +1,6 @@
 import React from 'react';
 import { colors } from '../../styles/colors';
-import { buttonStyles } from './buttons-styles';
+import { baseButtonStyles, buttonStyles } from './buttons-styles';
 import './button.css';
 
 interface ButtonProps {
@@ -14,31 +14,21 @@ interface ButtonProps {
 }
 
 export const Button = ({ children, icon, disable, compact, type, paddingHorizontal, onClick }: ButtonProps) => {
-  let buttonStyle = {};
-
-  if (type === 'primary') {
-    buttonStyle = {
+  const buttonStyleMapping = {
+    primary: {
       ...buttonStyles.primary,
-      height: compact ? '40px' : '48px',
       backgroundColor: disable ? colors.NeutralLight : colors.PrimaryXdark,
-      paddingLeft: paddingHorizontal || buttonStyles.primary.paddingLeft,
-      paddingRight: paddingHorizontal || buttonStyles.primary.paddingRight,
-    };
-  } else if (type === 'secondary') {
-    buttonStyle = {
-      ...buttonStyles.secondary,
-      height: compact ? '40px' : '48px',
-      paddingLeft: paddingHorizontal || buttonStyles.secondary.paddingLeft,
-      paddingRight: paddingHorizontal || buttonStyles.secondary.paddingRight,
-    };
-  } else if (type === 'cta') {
-    buttonStyle = {
-      ...buttonStyles.cta,
-      height: compact ? '40px' : '48px',
-      paddingLeft: paddingHorizontal || buttonStyles.cta.paddingLeft,
-      paddingRight: paddingHorizontal || buttonStyles.cta.paddingRight,
-    };
-  }
+    },
+    secondary: { ...buttonStyles.secondary },
+    cta: { ...buttonStyles.cta },
+  };
+
+  const buttonStyle = {
+    ...baseButtonStyles,
+    ...buttonStyleMapping[type],
+    height: compact ? '40px' : baseButtonStyles.height,
+    padding: paddingHorizontal?.toString() || baseButtonStyles.padding,
+  };
 
   const buttonHover = type === 'primary' && !disable ? 'primary-button' : '';
 
