@@ -1,46 +1,36 @@
 import { colors } from '../../styles/colors';
 import { typography } from '../../styles/typography/typography';
 
+export const baseButtonStyles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  minWidth: '143px',
+  borderRadius: typography.border.radius,
+  padding: `0 ${typography.size.large}`,
+  cursor: 'pointer',
+  height: '48px',
+};
+
 export const buttonStyles = {
   primary: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minWidth: '143px',
+    ...baseButtonStyles,
     border: 'none',
     color: colors.NeutralWhite,
-    borderRadius: typography.border.radius,
-    paddingLeft: typography.size.large,
-    paddingRight: typography.size.large,
     fontWeight: typography.weight.bold,
-    cursor: 'pointer',
   },
   secondary: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minWidth: '143px',
+    ...baseButtonStyles,
     border: `${typography.border.width} solid ${colors.Accessory1}`,
     backgroundColor: colors.NeutralWhite,
     color: colors.Accessory1,
-    borderRadius: typography.border.radius,
-    paddingLeft: typography.size.large,
-    paddingRight: typography.size.large,
     fontWeight: typography.weight.regular,
-    cursor: 'pointer',
   },
   cta: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minWidth: '143px',
+    ...baseButtonStyles,
     border: 'none',
     backgroundColor: colors.CTA,
     color: colors.NeutralWhite,
-    borderRadius: typography.border.radius,
-    paddingLeft: typography.size.large,
-    paddingRight: typography.size.large,
     fontWeight: typography.weight.bold,
-    cursor: 'pointer',
   },
 };
