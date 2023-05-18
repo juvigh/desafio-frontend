@@ -1,10 +1,11 @@
-import { colors } from "../colors";
-import { typography } from "./typography";
+import React from 'react';
+import { colors } from '../colors';
+import { typography } from './typography';
 
 interface Body2Props {
   children: React.ReactNode;
-  weight: "regular" | "bold";
-};
+  weight: 'regular' | 'bold';
+}
 
 export const Body2 = ({ children, weight }: Body2Props) => {
   return (
@@ -12,7 +13,7 @@ export const Body2 = ({ children, weight }: Body2Props) => {
       style={{
         fontFamily: typography.family.primary,
         fontSize: typography.size.xLarge,
-        fontWeight: typography.weight[weight === "regular" ? "regular" : "bold"],
+        fontWeight: typography.weight[weight === 'regular' ? 'regular' : 'bold'],
         color: colors.NeutralXdark,
       }}
     >

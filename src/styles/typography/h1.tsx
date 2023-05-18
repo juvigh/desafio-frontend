@@ -1,5 +1,6 @@
-import { colors } from "../colors";
-import { typography } from "./typography";
+import React from 'react';
+import { colors } from '../colors';
+import { typography } from './typography';
 
 export const H1 = ({ children }: { children: React.ReactNode }) => {
   return (
