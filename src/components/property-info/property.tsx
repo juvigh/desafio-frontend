@@ -21,5 +21,3 @@ export const PropertyInfo = ({ icon, title, flexDirection }: PropertyInfoProps) 
     </div>
   );
 };
-
-export default PropertyInfo;
