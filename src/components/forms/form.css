@@ -1,0 +1,8 @@
+.captionMsg {
+    display: flex;
+    align-items: center;
+}
+
+.captionMsg > svg {
+    margin-right: 5px;
+}
