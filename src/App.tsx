@@ -4,6 +4,7 @@ import { H1 } from './styles/typography/h1';
 import { H2 } from './styles/typography/h2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Separator } from './components/separator/separator';
 import { Button } from './components/buttons/button';
 
 function App() {
@@ -39,6 +40,11 @@ function App() {
         primary button
       </Button>
       <div className={'spacing'}></div>
+      <Separator className="spacing"></Separator>
+      <Separator className="spacing"></Separator>
+      <Separator className="spacing"></Separator>
+      <Separator className="spacing"></Separator>
+      <Separator className="spacing"></Separator>
     </div>
   );
 }
