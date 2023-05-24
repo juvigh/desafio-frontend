@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { formStyles } from './forms-style';
+import { formFieldStyles } from './form-field-style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { Separator } from '../separator/separator';
-import './form.css';
+import './form-field.css';
 
-interface FormStyles {
+interface FormFieldStyles {
   flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
   title: string;
 }
 
-export const Form = ({ flexDirection, title }: FormStyles) => {
+export const FormField = ({ flexDirection, title }: FormFieldStyles) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -29,16 +29,16 @@ export const Form = ({ flexDirection, title }: FormStyles) => {
     setHasError(inputValue === '');
   };
 
-  const formStyle = {
-    ...formStyles,
+  const formFieldStyle = {
+    ...formFieldStyles,
     flexDirection: flexDirection || 'column',
-    ...(isFocused && formStyles.focused),
-    ...(isFilled && formStyles.filled),
-    ...(hasError && formStyles.error),
+    ...(isFocused && formFieldStyles.focused),
+    ...(isFilled && formFieldStyles.filled),
+    ...(hasError && formFieldStyles.error),
   };
 
   const inputStyles = {
-    ...formStyle.inputStyles,
+    ...formFieldStyle.inputStyles,
   };
 
   const labelStyles = {
@@ -54,16 +54,20 @@ export const Form = ({ flexDirection, title }: FormStyles) => {
 
   return (
     <div>
-      <form style={formStyle} onFocus={handleFocus} onBlur={handleBlur}>
+      <div style={formFieldStyle}>
         <label style={labelStyles}>{title}</label>
-        <input style={inputStyles} placeholder={`Enter your ${title}`} onChange={handleInputChange} />
-      </form>
-      <span className={'captionMsg'} style={captionStyles}>
-        <Separator className="spacing-right">
-          <FontAwesomeIcon icon={faExclamationTriangle} />
-        </Separator>
+        <input
+          style={inputStyles}
+          placeholder={`Enter your ${title}`}
+          onChange={handleInputChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      </div>
+      <div className={'captionMsg'} style={captionStyles}>
+        <FontAwesomeIcon icon={faExclamationTriangle} />
         <span>Invalid {title}</span>
-      </span>
+      </div>
     </div>
   );
 };

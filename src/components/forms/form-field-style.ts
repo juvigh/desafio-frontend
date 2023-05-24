@@ -1,7 +1,7 @@
 import { colors } from '../../styles/colors';
 import { typography } from '../../styles/typography/typography';
 
-export const formStyles = {
+export const formFieldStyles = {
   display: 'flex',
   border: `1px solid ${colors.NeutralLight}`,
   minHeight: '72px',
