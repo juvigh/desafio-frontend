@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { formFieldStyles } from './form-field-style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
@@ -29,28 +29,40 @@ export const FormField = ({ flexDirection, title }: FormFieldStyles) => {
     setHasError(inputValue === '');
   };
 
-  const formFieldStyle = {
-    ...formFieldStyles,
-    flexDirection: flexDirection || 'column',
-    ...(isFocused && formFieldStyles.focused),
-    ...(isFilled && formFieldStyles.filled),
-    ...(hasError && formFieldStyles.error),
-  };
+  const formFieldStyle = useMemo(
+    () => ({
+      ...formFieldStyles,
+      flexDirection: flexDirection || 'column',
+      ...(isFocused && formFieldStyles.focused),
+      ...(isFilled && formFieldStyles.filled),
+      ...(hasError && formFieldStyles.error),
+    }),
+    [formFieldStyles, flexDirection, isFocused, isFilled, hasError],
+  );
 
-  const inputStyles = {
-    ...formFieldStyle.inputStyles,
-  };
+  const inputStyles = useMemo(
+    () => ({
+      ...formFieldStyle.inputStyles,
+    }),
+    [formFieldStyle],
+  );
 
-  const labelStyles = {
-    ...inputStyles,
-    ...(hasError && inputStyles.error),
-  };
+  const labelStyles = useMemo(
+    () => ({
+      ...inputStyles,
+      ...(hasError && inputStyles.error),
+    }),
+    [inputStyles, hasError],
+  );
 
-  const captionStyles = {
-    ...inputStyles,
-    ...inputStyles.error,
-    display: hasError ? 'flex' : 'none',
-  };
+  const captionStyles = useMemo(
+    () => ({
+      ...inputStyles,
+      ...inputStyles.error,
+      display: hasError ? 'flex' : 'none',
+    }),
+    [inputStyles, hasError],
+  );
 
   return (
     <div>
