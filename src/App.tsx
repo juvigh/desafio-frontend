@@ -13,16 +13,15 @@ function App() {
   return (
     <div className="App">
       <H1> Styleguide </H1>
-      <Separator className="spacing"></Separator>
-      <Separator className="spacing"></Separator>
-      <Separator className="spacing"></Separator>
       <Button type="primary">Cadastrar</Button>
-      <Separator className="spacing"></Separator>
       <PropertyInfo title="Carro" icon={<FontAwesomeIcon icon={faCar} />}></PropertyInfo>
-      <Separator className="spacing"></Separator>
       <FormField title="Nome"></FormField>
+      <Separator vertical size={20} />
       <FormField title="Email"></FormField>
+      <Separator vertical size={20} />
       <FormField title="Senha"></FormField>
+      <Separator vertical size={20} />
+      <Separator vertical size={20} />
     </div>
   );
 }

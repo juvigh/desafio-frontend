@@ -66,6 +66,7 @@ export const FormField = ({ flexDirection, title }: FormFieldStyles) => {
       </div>
       <div className={'captionMsg'} style={captionStyles}>
         <FontAwesomeIcon icon={faExclamationTriangle} />
+        <Separator horizontal size={4} />
         <span>Invalid {title}</span>
       </div>
     </div>

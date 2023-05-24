@@ -36,7 +36,8 @@ export const Button = ({ children, icon, disable, compact, type, paddingHorizont
   return (
     <div>
       <button className={buttonHover} style={buttonStyle} disabled={disable} onClick={onClick}>
-        {!!icon && <Separator className="spacing-right">{icon}</Separator>}
+        {!!icon && <span>{icon}</span>}
+        <Separator horizontal size={8} />
         <label> {children} </label>
       </button>
     </div>

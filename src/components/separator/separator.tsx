@@ -1,11 +1,16 @@
 import React from 'react';
-import './separator.css';
 
 interface SeparatorProps {
-  className: string;
-  children?: React.ReactNode;
+  vertical?: boolean;
+  horizontal?: boolean;
+  size: number;
 }
 
-export const Separator = ({ className, children }: SeparatorProps) => {
-  return <div className={className}>{children}</div>;
+export const Separator = ({ vertical = false, horizontal = false, size }: SeparatorProps) => {
+  const separatorStyle = {
+    height: vertical ? `${size}px` : undefined,
+    width: horizontal ? `${size}px` : undefined,
+  };
+
+  return <div style={separatorStyle}></div>;
 };
