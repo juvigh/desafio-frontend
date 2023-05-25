@@ -1,6 +1,7 @@
 import React from 'react';
 import { propertyStyles } from './property-info';
-// import { Separator } from '../separator/separator';
+import { H4 } from '../../styles/typography/h4';
+import { colors } from '../../styles/colors';
 
 interface PropertyInfoProps {
   icon: React.ReactNode;
@@ -16,8 +17,7 @@ export const PropertyInfo = ({ icon, title, flexDirection }: PropertyInfoProps) 
   return (
     <div style={propertyStyle}>
       <div style={propertyStyle.icon}>{icon}</div>
-      {/* <Separator className="spacing"></Separator> */}
-      <h4>{title}</h4>
+      <H4 style={{ color: colors.NeutralXdark, lineHeight: undefined }}>{title}</H4>
     </div>
   );
 };
