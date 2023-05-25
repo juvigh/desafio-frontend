@@ -7,11 +7,12 @@ export const badgeStyles = {
   justifyContent: 'center',
   border: `${typography.border.width} solid ${colors.NeutralMedium}`,
   color: colors.NeutralXdark,
+  fontSize: typography.size.large,
   backgroundColor: colors.NeutralWhite,
-  width: '86.82px',
-  height: '47.05px',
-  padding: `${typography.size.large}, ${typography.size.small}`,
+  height: '47px',
+  padding: `0 ${typography.size.small}`,
   borderRadius: typography.border.radius,
+  width: 'fit-content',
   cursor: 'pointer',
 };
 
