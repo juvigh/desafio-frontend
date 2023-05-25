@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { badgeStyles } from './badges-style';
 import { badgeStyles, hoverStyles, selectStyles } from './badges-style';
 
 interface BadgeProps {
@@ -25,7 +24,7 @@ export const Badge = ({ icon, title }: BadgeProps) => {
 
   const badgeStyle = {
     ...badgeStyles,
-    ...(select && badgeStyles.select),
+    ...(select && selectStyles),
     ...(hover ? hoverStyles : {}),
   };
 

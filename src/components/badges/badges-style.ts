@@ -13,11 +13,14 @@ export const badgeStyles = {
   padding: `${typography.size.large}, ${typography.size.small}`,
   borderRadius: typography.border.radius,
   cursor: 'pointer',
-  select: {
-    backgroundColor: colors.CTA,
-    border: `${typography.border.width} solid ${colors.CTA}`,
-    color: colors.NeutralWhite,
-  },
+};
+
+export const selectStyles = {
+  backgroundColor: colors.CTA,
+  border: `${typography.border.width} solid ${colors.CTA}`,
+  color: colors.NeutralWhite,
+};
+
 export const hoverStyles = {
   backgroundColor: colors.Accessory2,
   border: `${typography.border.width} solid ${colors.Accessory2}`,
