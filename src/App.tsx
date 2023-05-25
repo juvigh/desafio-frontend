@@ -6,6 +6,8 @@ import { Separator } from './components/separator/separator';
 import { Button } from './components/buttons/button';
 import { faCar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
+import { PropertyInfo } from './components/property-info/property';
 import PropertyInfo from './components/property-info/property';
 
 function App() {
