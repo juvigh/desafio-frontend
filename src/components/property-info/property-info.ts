@@ -12,7 +12,7 @@ export const propertyStyles = {
   borderRadius: typography.border.radiusLarge,
   width: '100px',
   height: '95px',
-  fontFamily: 'Poppins',
+  padding: typography.size.small,
   icon: {
     padding: typography.size.small,
   },
