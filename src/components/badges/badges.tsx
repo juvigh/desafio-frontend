@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { badgeStyles, hoverStyles, selectStyles } from './badges-style';
+import { LargeLabel } from '../../styles/typography/label';
+import { colors } from '../../styles/colors';
 
 interface BadgeProps {
   icon: React.ReactNode;
@@ -29,10 +31,11 @@ export const Badge = ({ icon, title }: BadgeProps) => {
   };
 
   return (
-    <div style={badgeStyle} onClick={handleClick}>
-      <div>{icon}</div>
-      <div>{title}</div>
     <div style={badgeStyle} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave} onClick={handleClick}>
+      <span>{icon}</span>
+      <LargeLabel weight={'regular'} style={select ? { color: colors.NeutralWhite } : {}}>
+        {title}
+      </LargeLabel>
     </div>
   );
 };
