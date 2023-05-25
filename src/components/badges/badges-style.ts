@@ -18,4 +18,7 @@ export const badgeStyles = {
     border: `${typography.border.width} solid ${colors.CTA}`,
     color: colors.NeutralWhite,
   },
+export const hoverStyles = {
+  backgroundColor: colors.Accessory2,
+  border: `${typography.border.width} solid ${colors.Accessory2}`,
 };
