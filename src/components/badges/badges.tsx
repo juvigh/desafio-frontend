@@ -26,7 +26,7 @@ export const Badge = ({ icon, title }: BadgeProps) => {
   const badgeStyle = {
     ...badgeStyles,
     ...(select && selectStyles),
-    ...(hover ? hoverStyles : {}),
+    ...(hover && hoverStyles),
   };
 
   return (
