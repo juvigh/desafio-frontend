@@ -2,6 +2,7 @@ import React from 'react';
 import { colors } from '../../styles/colors';
 import { baseButtonStyles, buttonStyles } from './buttons-styles';
 import './button.css';
+import { Separator } from '../separator/separator';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -36,6 +37,7 @@ export const Button = ({ children, icon, disable, compact, type, paddingHorizont
     <div>
       <button className={buttonHover} style={buttonStyle} disabled={disable} onClick={onClick}>
         {!!icon && <span>{icon}</span>}
+        <Separator horizontal size={8} />
         <label> {children} </label>
       </button>
     </div>

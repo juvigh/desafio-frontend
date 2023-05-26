@@ -1,44 +1,27 @@
 import React from 'react';
 import './App.css';
 import { H1 } from './styles/typography/h1';
-import { H2 } from './styles/typography/h2';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FormField } from './components/forms/form-field';
+import { Separator } from './components/separator/separator';
 import { Button } from './components/buttons/button';
+import PropertyInfo from './components/property-info/propertyInfo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
+// import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <div className="App">
       <H1> Styleguide </H1>
-      <H2> Botões </H2>
-      <Button type="primary" icon={<FontAwesomeIcon icon={faHeart} />}>
-        primary button
-      </Button>
-      <div className={'spacing'}></div>
-      <Button type="secondary">secondary button</Button>
-      <div className={'spacing'}></div>
-      <Button type="cta">Ctabutton</Button>
-      <div className={'spacing'}></div>
-      <Button type="primary" icon={<FontAwesomeIcon icon={faHeart} />} compact>
-        primary button
-      </Button>
-      <div className={'spacing'}></div>
-      <Button type="secondary" compact>
-        secondary button
-      </Button>
-      <div className={'spacing'}></div>
-      <Button type="cta" compact>
-        Ctabutton
-      </Button>
-      <div className={'spacing'}></div>
-      <Button type="primary" disable>
-        primary button
-      </Button>
-      <div className={'spacing'}></div>
-      <Button type="primary" disable compact>
-        primary button
-      </Button>
-      <div className={'spacing'}></div>
+      <Button type="primary">Cadastrar</Button>
+      <PropertyInfo title="Carro" icon={<FontAwesomeIcon icon={faCar} />}></PropertyInfo>
+      <FormField title="Nome"></FormField>
+      <Separator vertical size={20} />
+      <FormField title="Email"></FormField>
+      <Separator vertical size={20} />
+      <FormField title="Senha"></FormField>
+      <Separator vertical size={20} />
+      <Separator vertical size={20} />
     </div>
   );
 }
