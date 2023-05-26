@@ -5,10 +5,10 @@ import { typography } from './typography';
 interface LargeLabelProps {
   children: React.ReactNode;
   weight: 'regular' | 'bold' | 'semiBold';
-  style?: React.CSSProperties;
+  color?: keyof typeof colors;
 }
 
-export const LargeLabel = ({ children, weight, style }: LargeLabelProps) => {
+export const LargeLabel = ({ children, weight, color }: LargeLabelProps) => {
   let fontWeight;
   if (weight === 'regular') {
     fontWeight = typography.weight.regular;
@@ -23,8 +23,7 @@ export const LargeLabel = ({ children, weight, style }: LargeLabelProps) => {
         fontFamily: typography.family.primary,
         fontSize: typography.size.large,
         fontWeight: fontWeight,
-        color: colors.PrimaryXdark,
-        ...style,
+        color: color ? colors[color] : colors.PrimaryXdark,
       }}
     >
       {children}
