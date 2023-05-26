@@ -16,11 +16,11 @@ export const Badge = ({ icon, title }: BadgeProps) => {
     setSelect(!select);
   };
 
-  const MouseEnter = () => {
+  const mouseEnter = () => {
     setHover(true);
   };
 
-  const MouseLeave = () => {
+  const mouseLeave = () => {
     setHover(false);
   };
 
@@ -31,7 +31,7 @@ export const Badge = ({ icon, title }: BadgeProps) => {
   };
 
   return (
-    <div style={badgeStyle} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave} onClick={handleClick}>
+    <div style={badgeStyle} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={handleClick}>
       <span>{icon}</span>
       <LargeLabel weight={'regular'} style={select ? { color: colors.NeutralWhite } : {}}>
         {title}
