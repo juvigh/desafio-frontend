@@ -2,7 +2,12 @@ import React from 'react';
 import { colors } from '../colors';
 import { typography } from './typography';
 
-export const H4 = ({ children }: { children: React.ReactNode }) => {
+interface H4Props {
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+}
+
+export const H4 = ({ children, style }: H4Props) => {
   return (
     <h4
       style={{
@@ -11,6 +16,7 @@ export const H4 = ({ children }: { children: React.ReactNode }) => {
         fontWeight: typography.weight.extraBold,
         color: colors.PrimaryDark,
         lineHeight: typography.lineHeight.medium,
+        ...style,
       }}
     >
       {children}

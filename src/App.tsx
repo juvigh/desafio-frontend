@@ -4,10 +4,11 @@ import { H1 } from './styles/typography/h1';
 import { FormField } from './components/forms/form-field';
 import { Separator } from './components/separator/separator';
 import { Button } from './components/buttons/button';
-import PropertyInfo from './components/property-info/propertyInfo';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCar } from '@fortawesome/free-solid-svg-icons';
-// import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { PropertyInfo } from './components/property-info/property';
+import PropertyInfo from './components/property-info/property';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <FormField title="Senha"></FormField>
       <Separator vertical size={20} />
       <Separator vertical size={20} />
+      <PropertyInfo title="Carro" icon={<FontAwesomeIcon icon={faCar} />}></PropertyInfo>
     </div>
   );
 }
