@@ -1,0 +1,17 @@
+.cardContainer {
+  flex-direction: column;
+}
+
+.textContainer {
+  display: flex;
+}
+
+.imageContainer {
+  width: 100%;
+}
+
+.imageContainer > img {
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  height: 100%;
+}
