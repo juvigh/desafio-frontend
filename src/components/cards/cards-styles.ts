@@ -1,9 +1,24 @@
 import { colors } from '../../styles/colors';
+import { customStyles } from '../../styles/typography/style-customs';
 import { typography } from '../../styles/typography/typography';
 
-export const cardCategoryStyles = {
-  display: 'flex',
-  maxWidth: '212px',
+const commonStyles = {
   backgroundColor: colors.NeutralWhite,
   borderRadius: typography.border.radius,
+  caption: {
+    fontSize: customStyles.caption.size,
+    color: customStyles.caption.color,
+    fontWeight: customStyles.caption.weight,
+  },
+  mediumPrice: {
+    fontSize: customStyles.prices.mediumPrice.size,
+    color: customStyles.prices.mediumPrice.color,
+    fontWeight: customStyles.prices.mediumPrice.weight,
+  },
+};
+
+export const cardCategoryStyles = {
+  ...commonStyles,
+};
+
 };
