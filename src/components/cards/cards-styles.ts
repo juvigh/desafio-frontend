@@ -24,4 +24,7 @@ export const cardCategoryStyles = {
 export const cardImovelStyles = {
   ...commonStyles,
 };
+
+export const facilitiesImovelStyle = {
+  ...commonStyles,
 };
