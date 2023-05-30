@@ -21,4 +21,7 @@ export const cardCategoryStyles = {
   ...commonStyles,
 };
 
+export const cardImovelStyles = {
+  ...commonStyles,
+};
 };
