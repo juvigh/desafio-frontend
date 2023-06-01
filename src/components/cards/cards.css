@@ -1,5 +1,7 @@
 .cardContainer {
+  display: flex;
   flex-direction: column;
+  box-shadow: 0px 3.40299px 4.53731px rgba(153, 155, 168, 0.15);
 }
 
 .textContainer {
