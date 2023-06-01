@@ -2,32 +2,32 @@ import { faBath, faBed, faRuler } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './cards.css';
 import { Separator } from '../separator/separator';
-import { facilitiesImovelStyle } from './cards-styles';
+import { Caption } from '../../styles/typography/caption';
 
-interface facilitiesProps {
+interface FacilitiesProps {
   beds: number;
   bath: number;
   dimensions: string;
 }
 
-export const FacilitiesImovel = ({ beds, bath, dimensions }: facilitiesProps) => {
+export const FacilitiesProperty = ({ beds, bath, dimensions }: FacilitiesProps) => {
   return (
     <div className="facilities-container">
-      <div style={facilitiesImovelStyle.caption} className="facility-item">
+      <div className="facility-item">
         <Separator horizontal size={4} />
         <FontAwesomeIcon icon={faBed} />
         <Separator horizontal size={4} />
-        <p>{beds} quartos</p>
+        <Caption>{beds} quartos</Caption>
       </div>
-      <div style={facilitiesImovelStyle.caption} className="facility-item">
+      <div className="facility-item">
         <FontAwesomeIcon icon={faBath} />
         <Separator horizontal size={4} />
-        <p>{bath} banheiros</p>
+        <Caption>{bath} banheiros</Caption>
       </div>
-      <div style={facilitiesImovelStyle.caption} className="facility-item">
+      <div className="facility-item">
         <FontAwesomeIcon icon={faRuler} />
         <Separator horizontal size={4} />
-        <p>{dimensions} m²</p>
+        <Caption>{dimensions} m²</Caption>
         <Separator horizontal size={4} />
       </div>
     </div>

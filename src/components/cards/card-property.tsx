@@ -1,11 +1,13 @@
-import { cardImovelStyles } from './cards-styles';
+import { commonStyles } from './cards-styles';
 import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
-import { FacilitiesImovel } from './facilities-imovel';
+import { FacilitiesProperty } from './facilities-property';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { MediumPrice } from '../../styles/typography/prices';
+import { Caption } from '../../styles/typography/caption';
 
-interface CardImovelProps {
+interface CardPropertyProps {
   image: string;
   title: string;
   description: string;
@@ -15,23 +17,23 @@ interface CardImovelProps {
   dimension: string;
 }
 
-export const CardImovel = ({ image, title, description, price, beds, bath, dimension }: CardImovelProps) => {
+export const CardProperty = ({ image, title, description, price, beds, bath, dimension }: CardPropertyProps) => {
   return (
-    <div className={'cardContainer'} style={cardImovelStyles}>
+    <div className={'cardContainer'} style={commonStyles}>
       <div className={'imageContainer'}>
         <img src={image} alt={title} />
       </div>
 
       <div className={'priceContainer'}>
-        <p style={cardImovelStyles.mediumPrice}> {price}</p>
+        <MediumPrice> {price}</MediumPrice>
         <FontAwesomeIcon icon={faHeart} />
       </div>
       <div className={'descriptionContainer'}>
         <Body2 weight="bold"> {title}</Body2>
-        <p style={cardImovelStyles.caption}>{description}</p>
+        <Caption>{description}</Caption>
       </div>
       <div>
-        <FacilitiesImovel beds={beds} bath={bath} dimensions={dimension} />
+        <FacilitiesProperty beds={beds} bath={bath} dimensions={dimension} />
       </div>
     </div>
   );
