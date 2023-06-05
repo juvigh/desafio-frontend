@@ -1,4 +1,3 @@
-import { customStyles } from './../../styles/typography/style-customs';
 import { colors } from '../../styles/colors';
 import { typography } from '../../styles/typography/typography';
 
