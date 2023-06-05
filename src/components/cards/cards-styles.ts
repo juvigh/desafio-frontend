@@ -1,7 +1,7 @@
 import { colors } from '../../styles/colors';
 import { typography } from '../../styles/typography/typography';
 
-export const cardCategoryStyles = {
+export const cardStyles = {
   backgroundColor: colors.NeutralWhite,
   borderRadius: typography.border.radius,
 };

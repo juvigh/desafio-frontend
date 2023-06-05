@@ -1,4 +1,4 @@
-import { cardCategoryStyles } from './cards-styles';
+import { cardStyles } from './cards-styles';
 import { H3 } from '../../styles/typography/h3';
 import { Separator } from '../separator/separator';
 import { Body2 } from '../../styles/typography/body-2';
@@ -12,7 +12,7 @@ interface CardCategoryProps {
 
 export const CardCategory = ({ image, title, description }: CardCategoryProps) => {
   return (
-    <div className="cardContainer" style={cardCategoryStyles}>
+    <div className="cardContainer" style={cardStyles}>
       <div className={'imageContainer'}>
         <img src={image} alt={title} />
       </div>
