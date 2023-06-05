@@ -5,16 +5,17 @@ import { typography } from './typography';
 interface Body2Props {
   children: React.ReactNode;
   weight: 'regular' | 'bold';
+  color?: keyof typeof colors;
 }
 
-export const Body2 = ({ children, weight }: Body2Props) => {
+export const Body2 = ({ children, weight, color }: Body2Props) => {
   return (
     <p
       style={{
         fontFamily: typography.family.primary,
-        fontSize: typography.size.xLarge,
+        fontSize: typography.size.medium,
         fontWeight: typography.weight[weight === 'regular' ? 'regular' : 'bold'],
-        color: colors.NeutralXdark,
+        color: color ? colors[color] : colors.NeutralXdark,
       }}
     >
       {children}
