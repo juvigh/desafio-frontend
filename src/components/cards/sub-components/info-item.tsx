@@ -5,13 +5,13 @@ import { commonStyles } from './cards-styles';
 interface InfoItemProps {
   label: string;
   value: string | number;
-  isBold?: boolean;
-  isMediumPrice?: boolean;
+  bold?: boolean;
+  mediumPrice?: boolean;
 }
 
-export const InfoItem = ({ label, value, isBold, isMediumPrice }: InfoItemProps) => {
-  const valueStyle = isMediumPrice ? commonStyles.mediumPrice : commonStyles.smallPrice;
-  const labelStyle = isBold ? 'bold' : 'regular';
+export const InfoItem = ({ label, value, bold, mediumPrice }: InfoItemProps) => {
+  const valueStyle = mediumPrice ? commonStyles.mediumPrice : commonStyles.smallPrice;
+  const labelStyle = bold ? 'bold' : 'regular';
 
   return (
     <div className="info">

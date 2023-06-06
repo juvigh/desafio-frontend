@@ -25,8 +25,9 @@ export const CardSales = ({ price, condominium, iptu, name, workplace, address, 
   return (
     <CardContainer>
       <CardHeader title={price} />
-      <InfoItem label="Condomínio" value={condominium} isBold />
-      <InfoItem label="IPTU" value={iptu} isBold />
+      <Divider />
+      <InfoItem label="Condomínio" value={condominium} bold />
+      <InfoItem label="IPTU" value={iptu} bold />
       <CardContact image={image} name={name} workplace={workplace} address={address} />
       <CardButtons />
       <div className="icons">
