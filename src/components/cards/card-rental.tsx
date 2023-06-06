@@ -34,9 +34,6 @@ export const CardRental = ({
   return (
     <CardContainer>
       <CardHeader title={`${price}`} />
-      <div className="horizontalRule">
-        <hr />
-      </div>
       <InfoItem label="Condomínio" value={condominium} isBold />
       <InfoItem label="IPTU" value={iptu} isBold />
       <InfoItem label="Taxa de Serviços" value={serviceFee} isBold />

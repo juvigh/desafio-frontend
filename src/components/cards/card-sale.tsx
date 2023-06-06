@@ -25,9 +25,6 @@ export const CardSales = ({ price, condominium, iptu, name, workplace, address, 
   return (
     <CardContainer>
       <CardHeader title={price} />
-      <div className="horizontalRule">
-        <hr />
-      </div>
       <InfoItem label="Condomínio" value={condominium} isBold />
       <InfoItem label="IPTU" value={iptu} isBold />
       <CardContact image={image} name={name} workplace={workplace} address={address} />
