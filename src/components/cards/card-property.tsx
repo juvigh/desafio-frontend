@@ -32,9 +32,7 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
         <Body2 weight="bold"> {title}</Body2>
         <Caption>{description}</Caption>
       </div>
-      <div>
-        <FacilitiesProperty beds={beds} bath={bath} dimensions={dimension} />
-      </div>
+      <FacilitiesProperty beds={beds} bath={bath} dimensions={dimension} />
     </div>
   );
 };
