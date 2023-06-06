@@ -19,16 +19,16 @@ interface CardPropertyProps {
 
 export const CardProperty = ({ image, title, description, price, beds, bath, dimension }: CardPropertyProps) => {
   return (
-    <div className={'cardContainer'} style={commonStyles}>
-      <div className={'imageContainer'}>
+    <div className={'card-container'} style={commonStyles}>
+      <div className={'image-container'}>
         <img src={image} alt={title} />
       </div>
 
-      <div className={'priceContainer'}>
+      <div className={'price-container'}>
         <Price size="medium"> {price}</Price>
         <FontAwesomeIcon icon={faHeart} />
       </div>
-      <div className={'descriptionContainer'}>
+      <div className={'description-container'}>
         <Body2 weight="bold"> {title}</Body2>
         <Caption>{description}</Caption>
       </div>
