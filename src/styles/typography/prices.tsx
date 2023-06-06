@@ -2,43 +2,31 @@ import React from 'react';
 import { colors } from '../colors';
 import { typography } from './typography';
 
-export const BigPrice = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <p
-      style={{
-        fontFamily: typography.family.primary,
-        fontSize: typography.size.xxxLarge,
-        fontWeight: typography.weight.bold,
-        color: colors.NeutralXdark,
-      }}
-    >
-      {children}
-    </p>
-  );
-};
+interface PriceProps {
+  size: 'big' | 'medium' | 'small';
+  children: React.ReactNode;
+}
 
-export const MediumPrice = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <p
-      style={{
-        fontFamily: typography.family.primary,
-        fontSize: typography.size.xLarge,
-        fontWeight: typography.weight.bold,
-        color: colors.NeutralXdark,
-      }}
-    >
-      {children}
-    </p>
-  );
-};
+export const Price = ({ size, children }: PriceProps) => {
+  let fontSize, fontWeight;
 
-export const SmallPrice = ({ children }: { children: React.ReactNode }) => {
+  if (size === 'big') {
+    fontSize = typography.size.xxxLarge;
+    fontWeight = typography.weight.bold;
+  } else if (size === 'medium') {
+    fontSize = typography.size.xLarge;
+    fontWeight = typography.weight.bold;
+  } else {
+    fontSize = typography.size.medium;
+    fontWeight = typography.weight.regular;
+  }
+
   return (
     <p
       style={{
         fontFamily: typography.family.primary,
-        fontSize: typography.size.medium,
-        fontWeight: typography.weight.regular,
+        fontSize,
+        fontWeight,
         color: colors.NeutralXdark,
       }}
     >

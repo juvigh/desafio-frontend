@@ -4,7 +4,7 @@ import './cards.css';
 import { FacilitiesProperty } from './facilities-property';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { MediumPrice } from '../../styles/typography/prices';
+import { Price } from '../../styles/typography/prices';
 import { Caption } from '../../styles/typography/caption';
 
 interface CardPropertyProps {
@@ -25,7 +25,7 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
       </div>
 
       <div className={'priceContainer'}>
-        <MediumPrice> {price}</MediumPrice>
+        <Price size="medium"> {price}</Price>
         <FontAwesomeIcon icon={faHeart} />
       </div>
       <div className={'descriptionContainer'}>
