@@ -11,13 +11,18 @@ interface CardPropertyProps {
   image: string;
   title: string;
   description: string;
-  price: string;
+  price: number;
   beds: number;
   bath: number;
   dimension: string;
 }
 
 export const CardProperty = ({ image, title, description, price, beds, bath, dimension }: CardPropertyProps) => {
+  const formatPrice = (price: number) => {
+    const formattedPrice = (price / 100).toFixed(2);
+    return `R$ ${formattedPrice}`;
+  };
+
   return (
     <div className={'card-container'} style={commonStyles}>
       <div className={'image-container'}>
@@ -25,8 +30,8 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
       </div>
 
       <div className={'price-container'}>
-        <Price size="medium"> {price}</Price>
         <FontAwesomeIcon icon={faHeart} />
+        <Price size="medium">{formatPrice(price)}</Price>
       </div>
       <div className={'description-container'}>
         <Body2 weight="bold"> {title}</Body2>
