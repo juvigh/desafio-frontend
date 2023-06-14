@@ -12,9 +12,10 @@ interface ButtonProps {
   compact?: boolean;
   paddingHorizontal?: number;
   onClick?: () => void;
+  expand?: boolean;
 }
 
-export const Button = ({ children, icon, disable, compact, type, paddingHorizontal, onClick }: ButtonProps) => {
+export const Button = ({ children, icon, disable, compact, type, paddingHorizontal, onClick, expand }: ButtonProps) => {
   const buttonStyleMapping = {
     primary: {
       ...buttonStyles.primary,
@@ -29,6 +30,7 @@ export const Button = ({ children, icon, disable, compact, type, paddingHorizont
     ...buttonStyleMapping[type],
     height: compact ? '40px' : baseButtonStyles.height,
     padding: paddingHorizontal?.toString() || baseButtonStyles.padding,
+    minWidth: expand ? '100%' : baseButtonStyles.minWidth,
   };
 
   const buttonHover = type === 'primary' && !disable ? 'primary-button' : '';
