@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CardHeader } from './sub-components/card-header';
 import { CardContact } from './sub-components/card-contact';
 import { CardButtons } from './sub-components/card-buttons';
 import { Body2 } from '../../styles/typography/body-2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faShareFromSquare } from '@fortawesome/free-regular-svg-icons';
+import { faShareSquare } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import { IconText } from './sub-components/icon-text';
 import { commonStyles } from './cards-styles';
 import { CardContainer } from './sub-components/card-container';
@@ -23,6 +25,12 @@ interface CardSalesProps {
 }
 
 export const CardSales = ({ price, condominium, iptu, name, workplace, address, image }: CardSalesProps) => {
+  const [isHearted, setIsHearted] = useState(false);
+
+  const handleHeartClick = () => {
+    setIsHearted(!isHearted);
+  };
+
   return (
     <CardContainer>
       <CardHeader title={price} />
@@ -32,8 +40,18 @@ export const CardSales = ({ price, condominium, iptu, name, workplace, address, 
       <CardContact image={image} name={name} workplace={workplace} address={address} />
       <CardButtons />
       <div className="icons">
-        <IconText icon={<FontAwesomeIcon icon={faHeart} className="favorite-icon" />} text="Favoritar" />
-        <IconText icon={<FontAwesomeIcon icon={faShareFromSquare} className="share-icon" />} text="Compartilhar" />
+        <IconText
+          icon={
+            <FontAwesomeIcon
+              icon={isHearted ? faHeartSolid : faHeartRegular}
+              className={isHearted ? 'hearted' : ''}
+              onClick={handleHeartClick}
+            />
+          }
+          text={isHearted ? 'Favoritado' : 'Favoritar'}
+          onClick={handleHeartClick}
+        />
+        <IconText icon={<FontAwesomeIcon icon={faShareSquare} className="share-icon" />} text="Compartilhar" />
       </div>
     </CardContainer>
   );
