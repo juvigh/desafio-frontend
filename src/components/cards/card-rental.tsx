@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CardButtons } from './sub-components/card-buttons';
 import { CardContact } from './sub-components/card-contact';
 import { CardHeader } from './sub-components/card-header';
 import { IconText } from './sub-components/icon-text';
-import { faHeart, faShareSquare } from '@fortawesome/free-regular-svg-icons';
+import { faShareSquare } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import { CardContainer } from './sub-components/card-container';
 import { commonStyles } from './cards-styles';
 import './sub-components/sub-components.css';
@@ -31,6 +34,12 @@ export const CardRental = ({
   serviceFee,
   grossRent,
 }: CardRentalProps) => {
+  const [isHearted, setIsHearted] = useState(false);
+
+  const handleHeartClick = () => {
+    setIsHearted(!isHearted);
+  };
+
   const price = (condominium + iptu + serviceFee + grossRent).toFixed(2);
   return (
     <CardContainer>
@@ -45,7 +54,17 @@ export const CardRental = ({
       <CardContact image={image} name={name} workplace={workplace} address={address} />
       <CardButtons />
       <div className="icons">
-        <IconText icon={<FontAwesomeIcon icon={faHeart} className="favorite-icon" />} text="Favoritar" />
+        <IconText
+          icon={
+            <FontAwesomeIcon
+              icon={isHearted ? faHeartSolid : faHeartRegular}
+              className={isHearted ? 'hearted' : ''}
+              onClick={handleHeartClick}
+            />
+          }
+          text={isHearted ? 'Favoritado' : 'Favoritar'}
+          onClick={handleHeartClick}
+        />
         <IconText icon={<FontAwesomeIcon icon={faShareSquare} className="share-icon" />} text="Compartilhar" />
       </div>
     </CardContainer>
