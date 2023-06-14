@@ -51,3 +51,7 @@
 .facility-item > p {
   white-space: nowrap;
 }
+
+.hearted {
+  color: red;
+}
