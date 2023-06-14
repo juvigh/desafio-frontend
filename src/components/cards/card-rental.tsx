@@ -45,12 +45,12 @@ export const CardRental = ({
     <CardContainer>
       <CardHeader title={`${price}`} />
       <Divider />
-      <InfoItem label="Condomínio" value={condominium} bold />
-      <InfoItem label="IPTU" value={iptu} bold />
-      <InfoItem label="Taxa de Serviços" value={serviceFee} bold />
-      <InfoItem label="Aluguel Bruto" value={grossRent} bold />
+      <InfoItem label="Condomínio" value={condominium} />
+      <InfoItem label="IPTU" value={iptu} />
+      <InfoItem label="Taxa de Serviços" value={serviceFee} />
+      <InfoItem label="Aluguel Bruto" value={grossRent} />
       <Divider />
-      <InfoItem label="Total" value={price} bold mediumPrice />
+      <InfoItem label="Total" value={price} mediumPrice />
       <CardContact image={image} name={name} workplace={workplace} address={address} />
       <CardButtons />
       <div className="icons">
