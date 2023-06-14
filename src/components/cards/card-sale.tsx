@@ -10,6 +10,7 @@ import { commonStyles } from './cards-styles';
 import { CardContainer } from './sub-components/card-container';
 import './sub-components/sub-components.css';
 import { InfoItem } from './sub-components/info-item';
+import { Divider } from '../divider/divider';
 
 interface CardSalesProps {
   price: string;

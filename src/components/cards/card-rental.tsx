@@ -8,6 +8,7 @@ import { CardContainer } from './sub-components/card-container';
 import { commonStyles } from './cards-styles';
 import './sub-components/sub-components.css';
 import { InfoItem } from './sub-components/info-item';
+import { Divider } from '../divider/divider';
 
 interface CardRentalProps {
   condominium: number;
