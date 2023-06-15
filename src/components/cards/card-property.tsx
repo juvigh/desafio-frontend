@@ -3,7 +3,7 @@ const formatPrice = (price: number) => {
   return `R$ ${formattedPrice}`;
 };
 
-import { commonStyles } from './cards-styles';
+import { cardStyles } from './cards-styles';
 import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
 import { FacilitiesProperty } from './facilities-property';
@@ -32,7 +32,7 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
   };
 
   return (
-    <div className={'card-container'} style={commonStyles}>
+    <div className={'card-container'} style={cardStyles}>
       <div className={'image-container'}>
         <img src={image} alt={title} />
       </div>
