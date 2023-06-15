@@ -3,7 +3,6 @@ const formatPrice = (price: number) => {
   return `R$ ${formattedPrice}`;
 };
 
-import { cardStyles } from './cards-styles';
 import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
 import { FacilitiesProperty } from './facilities-property';
@@ -13,6 +12,7 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import { Price } from '../../styles/typography/prices';
 import { Caption } from '../../styles/typography/caption';
 import { useState } from 'react';
+import { CardContainer } from './sub-components/card-container';
 
 interface CardPropertyProps {
   image: string;
@@ -32,7 +32,7 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
   };
 
   return (
-    <div className={'card-container'} style={cardStyles}>
+    <CardContainer>
       <div className={'image-container'}>
         <img src={image} alt={title} />
       </div>
@@ -50,6 +50,6 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
         <Caption>{description}</Caption>
       </div>
       <FacilitiesProperty beds={beds} bath={bath} dimensions={dimension} />
-    </div>
+    </CardContainer>
   );
 };

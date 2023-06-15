@@ -1,8 +1,8 @@
-import { cardStyles } from './cards-styles';
 import { H3 } from '../../styles/typography/h3';
 import { Separator } from '../separator/separator';
 import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
+import { CardContainer } from './sub-components/card-container';
 
 interface CardCategoryProps {
   image: string;
@@ -12,7 +12,7 @@ interface CardCategoryProps {
 
 export const CardCategory = ({ image, title, description }: CardCategoryProps) => {
   return (
-    <div className="cardContainer" style={cardStyles}>
+    <CardContainer>
       <div className={'imageContainer'}>
         <img src={image} alt={title} />
       </div>
@@ -28,6 +28,6 @@ export const CardCategory = ({ image, title, description }: CardCategoryProps) =
           {description}
         </Body2>
       </div>
-    </div>
+    </CardContainer>
   );
 };

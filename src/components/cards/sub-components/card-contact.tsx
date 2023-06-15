@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LargeLabel } from '../../../styles/typography/label';
-import { commonStyles } from '../cards-styles';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { Separator } from '../../separator/separator';
 import { colors } from '../../../styles/colors';
+import { Caption } from '../../../styles/typography/caption';
 
 interface ContactProps {
   image: string;
@@ -24,17 +24,11 @@ export const CardContact = ({ image, name, workplace, address }: ContactProps) =
             <FontAwesomeIcon icon={faCheckCircle} color={`${colors.FeedbackSuccess}`} />
           </div>
           <div>
-            <p style={commonStyles.caption} className="workplace">
-              {workplace}
-            </p>
-            <p style={commonStyles.caption} className="address">
-              {address}
-            </p>
+            <Caption>{workplace}</Caption>
+            <Caption>{address}</Caption>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-// dps observar se o usuario é verificado ou nao

@@ -1,5 +1,5 @@
 import React from 'react';
-import { commonStyles } from '../cards-styles';
+import { Price } from '../../../styles/typography/prices';
 
 interface CardHeaderProps {
   title: string;
@@ -8,7 +8,7 @@ interface CardHeaderProps {
 export const CardHeader = ({ title }: CardHeaderProps) => {
   return (
     <div className="header">
-      <p style={commonStyles.bigPrice}>R${title}</p>
+      <Price size="big">R${title}</Price>
     </div>
   );
 };

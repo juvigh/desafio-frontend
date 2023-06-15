@@ -8,7 +8,6 @@ import { faShareSquare } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import { CardContainer } from './sub-components/card-container';
-import { commonStyles } from './cards-styles';
 import './sub-components/sub-components.css';
 import { InfoItem } from './sub-components/info-item';
 import { Divider } from '../divider/divider';
