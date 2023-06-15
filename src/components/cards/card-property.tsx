@@ -1,3 +1,8 @@
+const formatPrice = (price: number) => {
+  const formattedPrice = (price / 100).toFixed(2);
+  return `R$ ${formattedPrice}`;
+};
+
 import { commonStyles } from './cards-styles';
 import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
@@ -24,11 +29,6 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
 
   const handleHeartClick = () => {
     setIsHearted(!isHearted);
-  };
-
-  const formatPrice = (price: number) => {
-    const formattedPrice = (price / 100).toFixed(2);
-    return `R$ ${formattedPrice}`;
   };
 
   return (
