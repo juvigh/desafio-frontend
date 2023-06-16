@@ -5,20 +5,27 @@
   margin: 0 12px;
 }
 
-.text-container {
-  display: flex;
-}
-
-.image-container {
+.property-image-container {
   width: 100%;
-  height: 100%;
+  height: 190px;
 }
 
-.image-container > img {
+.category-image-container {
+  width: 100%;
+  height: 250px;
+}
+
+.property-image-container > img,
+.category-image-container > img {
   border-radius: 4px 4px 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+.text-container {
+  display: flex;
 }
 
 .price-container {

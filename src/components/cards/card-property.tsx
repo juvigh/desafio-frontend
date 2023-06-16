@@ -33,7 +33,7 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
 
   return (
     <CardContainer>
-      <div className={'image-container'}>
+      <div className={'property-image-container'}>
         <img src={image} alt={title} />
       </div>
 
