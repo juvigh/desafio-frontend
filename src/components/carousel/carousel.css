@@ -1,0 +1,5 @@
+.carousel-card .react-multiple-carousel__arrow,
+.carousel-card .react-multiple-carousel__arrow::before,
+.carousel-card .react-multiple-carousel__arrow::after {
+  display: none;
+}
