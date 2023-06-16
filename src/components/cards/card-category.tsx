@@ -4,7 +4,7 @@ import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
 import { CardContainer } from './sub-components/card-container';
 
-interface CardCategoryProps {
+export interface CardCategoryProps {
   image: string;
   title: string;
   description: string;

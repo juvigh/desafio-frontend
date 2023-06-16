@@ -14,7 +14,7 @@ import { Caption } from '../../styles/typography/caption';
 import { useState } from 'react';
 import { CardContainer } from './sub-components/card-container';
 
-interface CardPropertyProps {
+export interface CardPropertyProps {
   image: string;
   title: string;
   description: string;
