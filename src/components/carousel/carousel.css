@@ -3,3 +3,25 @@
 .carousel-card .react-multiple-carousel__arrow::after {
   display: none;
 }
+
+.image-carousel {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item {
+  padding-inline: 4px;
+  height: 365px;
+}
+
+.carousel-image .react-multiple-carousel__arrow {
+  background-color: #fdfdfd;
+}
+
+.carousel-image .react-multiple-carousel__arrow::before,
+.carousel-image .react-multiple-carousel__arrow::after {
+  color: #2e9ca3;
+}
+
