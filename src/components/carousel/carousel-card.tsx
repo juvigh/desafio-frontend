@@ -35,21 +35,9 @@ export const CarouselCard = ({ cardsData }: CarouselCardProps) => {
 
   const renderCard = (cardData: CardData) => {
     if (cardData.type === 'property') {
-      const { image, title, description, price, beds, bath, dimension } = cardData.data as CardPropertyProps;
-      return (
-        <CardProperty
-          image={image}
-          title={title}
-          description={description}
-          price={price}
-          beds={beds}
-          bath={bath}
-          dimension={dimension}
-        />
-      );
+      return <CardProperty {...(cardData.data as CardPropertyProps)} />;
     } else if (cardData.type === 'category') {
-      const { image, title, description } = cardData.data as CardCategoryProps;
-      return <CardCategory image={image} title={title} description={description} />;
+      return <CardCategory {...(cardData.data as CardCategoryProps)} />;
     }
     return null;
   };
