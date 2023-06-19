@@ -2,14 +2,19 @@ import React from 'react';
 import { colors } from '../colors';
 import { typography } from './typography';
 
-export const Body1 = ({ children }: { children: React.ReactNode }) => {
+interface Body1Props {
+  children: React.ReactNode;
+  color?: keyof typeof colors;
+}
+
+export const Body1 = ({ children, color }: Body1Props) => {
   return (
     <p
       style={{
         fontFamily: typography.family.primary,
         fontSize: typography.size.xLarge,
         fontWeight: typography.weight.regular,
-        color: colors.NeutralXdark,
+        color: color ? colors[color] : colors.NeutralXdark,
       }}
     >
       {children}
