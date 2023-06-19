@@ -14,7 +14,7 @@ import { Caption } from '../../styles/typography/caption';
 import { useState } from 'react';
 import { CardContainer } from './sub-components/card-container';
 
-interface CardPropertyProps {
+export interface CardPropertyProps {
   image: string;
   title: string;
   description: string;
@@ -33,11 +33,11 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
 
   return (
     <CardContainer>
-      <div className={'image-container'}>
+      <div className="property-image-container">
         <img src={image} alt={title} />
       </div>
 
-      <div className={'price-container'}>
+      <div className="price-container">
         <Price size="medium">{formatPrice(price)}</Price>
         <FontAwesomeIcon
           icon={isHearted ? faHeartSolid : faHeartRegular}
@@ -45,7 +45,7 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
           onClick={handleHeartClick}
         />
       </div>
-      <div className={'description-container'}>
+      <div className="description-container">
         <Body2 weight="bold"> {title}</Body2>
         <Caption>{description}</Caption>
       </div>
