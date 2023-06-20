@@ -5,9 +5,10 @@ import { typography } from './typography';
 interface PriceProps {
   size: 'big' | 'medium' | 'small';
   children: React.ReactNode;
+  color?: keyof typeof colors;
 }
 
-export const Price = ({ size, children }: PriceProps) => {
+export const Price = ({ size, children, color }: PriceProps) => {
   let fontSize, fontWeight;
 
   if (size === 'big') {
@@ -27,7 +28,7 @@ export const Price = ({ size, children }: PriceProps) => {
         fontFamily: typography.family.primary,
         fontSize,
         fontWeight,
-        color: colors.NeutralXdark,
+        color: color ? colors[color] : colors.NeutralXdark,
       }}
     >
       {children}
