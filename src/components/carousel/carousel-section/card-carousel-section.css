@@ -1,0 +1,8 @@
+.carousel-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-section > h2 {
+    padding-left: 12px;
+}
