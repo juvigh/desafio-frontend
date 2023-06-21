@@ -13,7 +13,7 @@ export const CardCarouselSection = ({ title, cardsData }: CardCarouselSectionPro
   return (
     <section className="carousel-section">
       <H2 color="NeutralXdark">{title}</H2>
-      <Separator vertical size={8} />
+      <Separator vertical size={2} />
       <CarouselCard cardsData={cardsData} />
     </section>
   );
