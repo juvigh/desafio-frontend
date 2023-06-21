@@ -7,10 +7,10 @@ import { CardContainer } from './sub-components/card-container';
 export interface CardCategoryProps {
   image: string;
   title: string;
-  description: string;
+  numberOfProperties: number;
 }
 
-export const CardCategory = ({ image, title, description }: CardCategoryProps) => {
+export const CardCategory = ({ image, title, numberOfProperties }: CardCategoryProps) => {
   return (
     <CardContainer>
       <div className={'category-image-container'}>
@@ -25,7 +25,7 @@ export const CardCategory = ({ image, title, description }: CardCategoryProps) =
       <div className={'text-container'}>
         <Separator horizontal size={10} />
         <Body2 color="NeutralMedium" weight="regular">
-          {description}
+          {numberOfProperties} Imóveis
         </Body2>
       </div>
     </CardContainer>
