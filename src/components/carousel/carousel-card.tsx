@@ -22,11 +22,18 @@ export const CarouselCard = ({ children }: { children: React.ReactNode }) => {
     },
   };
 
+  if (!children) {
     return null;
-  };
+  }
+
+  const childArray = React.Children.toArray(children);
+  const filteredChildren = childArray.slice(1, -1);
 
   return (
     <Carousel responsive={responsive} className="carousel-card">
+      {filteredChildren.map((child, index) => (
+        <div key={index}>{child}</div>
+      ))}
     </Carousel>
   );
 };
