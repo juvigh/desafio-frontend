@@ -1,20 +1,20 @@
 import React from 'react';
-import { CardData, CarouselCard } from '../carousel-card';
+import { CarouselCard } from '../carousel-card';
 import { H2 } from '../../../styles/typography/h2';
 import { Separator } from '../../separator/separator';
 import './card-carousel-section.css';
 
 interface CardCarouselSectionProps {
   title: string;
-  cardsData: CardData[];
+  children: React.ReactNode;
 }
 
-export const CardCarouselSection = ({ title, cardsData }: CardCarouselSectionProps) => {
+export const CardCarouselSection = ({ title, children }: CardCarouselSectionProps) => {
   return (
     <section className="carousel-section">
       <H2 color="NeutralXdark">{title}</H2>
       <Separator vertical size={2} />
-      <CarouselCard cardsData={cardsData} />
+      <CarouselCard> {children} </CarouselCard>
     </section>
   );
 };
