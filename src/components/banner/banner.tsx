@@ -6,12 +6,12 @@ import { Separator } from '../separator/separator';
 import './banner.css';
 
 export const Banner = () => {
-  const handleSearchClick = () => {
+  const handleBannerClick = () => {
     alert('Em construção');
   };
 
   return (
-    <div className="banner-container" onClick={handleSearchClick}>
+    <div className="banner-container" onClick={handleBannerClick}>
       <img src={banner} alt="Banner" />
       <div className="banner-text">
         <Display color="NeutralWhite">Melhores imóveis</Display>
