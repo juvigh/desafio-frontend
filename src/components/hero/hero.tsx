@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { LargeLabel } from '../../styles/typography/label';
 import './hero.css';
-import picture from './assets/picture.svg';
+import picture from '../../assets/picture.svg';
 import { Separator } from '../separator/separator';
 
 export const Hero = () => {
