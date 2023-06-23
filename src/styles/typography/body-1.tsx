@@ -15,6 +15,7 @@ export const Body1 = ({ children, color }: Body1Props) => {
         fontSize: typography.size.xLarge,
         fontWeight: typography.weight.regular,
         color: color ? colors[color] : colors.NeutralXdark,
+        margin: 0,
       }}
     >
       {children}
