@@ -17,6 +17,7 @@ export const H3 = ({ children, color, weight, lineHeight }: H3Props) => {
         fontWeight: weight ? typography.weight[weight] : typography.weight.semiBold,
         color: color ? colors[color] : colors.NeutralDark,
         lineHeight: lineHeight ? lineHeight : typography.lineHeight.medium,
+        margin: 0,
       }}
     >
       {children}
