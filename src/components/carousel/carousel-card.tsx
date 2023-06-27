@@ -1,24 +1,13 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { CardCategory, CardCategoryProps } from '../cards/card-category';
-import { CardProperty, CardPropertyProps } from '../cards/card-property';
 import './carousel.css';
 
-export interface CardData {
-  type: 'property' | 'category';
-  data: CardPropertyProps | CardCategoryProps;
-}
-
-interface CarouselCardProps {
-  cardsData: CardData[];
-}
-
-export const CarouselCard = ({ cardsData }: CarouselCardProps) => {
+export const CarouselCard = ({ children }: { children: React.ReactNode }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 4.3,
       slidesToSlide: 3,
     },
     tablet: {
@@ -33,20 +22,18 @@ export const CarouselCard = ({ cardsData }: CarouselCardProps) => {
     },
   };
 
-  const renderCard = (cardData: CardData) => {
-    if (cardData.type === 'property') {
-      return <CardProperty {...(cardData.data as CardPropertyProps)} />;
-    } else if (cardData.type === 'category') {
-      return <CardCategory {...(cardData.data as CardCategoryProps)} />;
-    }
+  if (!children) {
     return null;
-  };
+  }
+
+  const childArray = React.Children.toArray(children);
+  const filteredChildren = childArray.slice(1, -1);
 
   return (
     <Carousel responsive={responsive} className="carousel-card">
-      {cardsData.map((card, index) => {
-        return <div key={index}>{renderCard(card)}</div>;
-      })}
+      {filteredChildren.map((child, index) => (
+        <div key={index}>{child}</div>
+      ))}
     </Carousel>
   );
 };

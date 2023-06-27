@@ -38,7 +38,9 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
       </div>
 
       <div className="price-container">
-        <Price size="medium">{formatPrice(price)}</Price>
+        <Price color="CTA" size="medium">
+          {formatPrice(price)}
+        </Price>
         <FontAwesomeIcon
           icon={isHearted ? faHeartSolid : faHeartRegular}
           className={isHearted ? 'hearted' : ''}
