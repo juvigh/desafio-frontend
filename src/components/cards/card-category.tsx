@@ -6,20 +6,20 @@ import { CardContainer } from './sub-components/card-container';
 
 export interface CardCategoryProps {
   image: string;
-  title: string;
+  name: string;
   numberOfProperties: number;
 }
 
-export const CardCategory = ({ image, title, numberOfProperties }: CardCategoryProps) => {
+export const CardCategory = ({ image, name, numberOfProperties }: CardCategoryProps) => {
   return (
     <CardContainer>
       <div className={'category-image-container'}>
-        <img src={image} alt={title} />
+        <img src={image} alt={name} />
       </div>
       <div className={'text-container'}>
         <Separator horizontal size={10} />
         <H3 color="NeutralXdark" weight="regular" lineHeight="15px">
-          {title}
+          {name}
         </H3>
       </div>
       <div className={'text-container'}>
