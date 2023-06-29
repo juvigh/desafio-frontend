@@ -9,12 +9,8 @@ export const CategoryCarousel = () => {
 
   useEffect(() => {
     const fetchCategoriesData = async () => {
-      try {
-        const fetchedCategories = await fetchCategories();
-        setCategories(fetchedCategories);
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-      }
+      const fetchedCategories = await fetchCategories();
+      setCategories(fetchedCategories);
     };
 
     fetchCategoriesData().catch((error) => {
