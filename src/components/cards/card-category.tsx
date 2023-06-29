@@ -1,5 +1,4 @@
 import { H3 } from '../../styles/typography/h3';
-import { Separator } from '../separator/separator';
 import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
 import { CardContainer } from './sub-components/card-container';
@@ -16,14 +15,12 @@ export const CardCategory = ({ image, name, numberOfProperties }: CardCategoryPr
       <div className={'category-image-container'}>
         <img src={image} alt={name} />
       </div>
-      <div className={'text-container'}>
-        <Separator horizontal size={10} />
+      <div className={'title-container'}>
         <H3 color="NeutralXdark" weight="regular" lineHeight="15px">
           {name}
         </H3>
       </div>
-      <div className={'text-container'}>
-        <Separator horizontal size={10} />
+      <div className={'properties-container'}>
         <Body2 color="NeutralMedium" weight="regular">
           {numberOfProperties} Imóveis
         </Body2>

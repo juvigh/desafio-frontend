@@ -24,8 +24,12 @@
 }
 
 
-.text-container {
-  display: flex;
+.title-container {
+  padding: 16px 0px 8px 12px;
+}
+
+.properties-container {
+  padding: 4px 0px 24px 12px;
 }
 
 .price-container {
