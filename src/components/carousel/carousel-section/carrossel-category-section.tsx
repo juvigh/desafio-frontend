@@ -5,6 +5,7 @@ import { CardCategory } from '../../cards/card-category';
 
 export const CategoryCarousel = () => {
   const [categories, setCategories] = useState<Category[]>([]);
+  const [error, setError] = useState<string>('');
 
   useEffect(() => {
     const fetchCategoriesData = async () => {
@@ -18,19 +19,24 @@ export const CategoryCarousel = () => {
 
     fetchCategoriesData().catch((error) => {
       console.error('Error fetching categories:', error);
+      setError('Error fetching categories.');
     });
   }, []);
 
   return (
-    <CardCarouselSection title="Encontre o imóvel ideal para o seu estilo de vida!">
-      {categories.map((category) => (
-        <CardCategory
-          key={category.id}
-          name={category.name}
-          image={category.imageUrl}
-          numberOfProperties={category.numberOfProperties}
-        />
-      ))}
-    </CardCarouselSection>
+    <>
+      {error || categories.length === 0 ? null : (
+        <CardCarouselSection title="Encontre o imóvel ideal para o seu estilo de vida!">
+          {categories.map((category) => (
+            <CardCategory
+              key={category.id}
+              name={category.name}
+              image={category.imageUrl}
+              numberOfProperties={category.numberOfProperties}
+            />
+          ))}
+        </CardCarouselSection>
+      )}
+    </>
   );
 };
