@@ -44,7 +44,7 @@ export const Button = ({
     ...buttonStyleMapping[type],
     height: compact ? '40px' : baseButtonStyles.height,
     padding: paddingHorizontal?.toString() || baseButtonStyles.padding,
-    minWidth: expand ? '100%' : baseButtonStyles.minWidth,
+    width: expand ? '100%' : '',
   };
 
   const buttonHover = type === 'primary' && !disable ? 'primary-button' : '';
