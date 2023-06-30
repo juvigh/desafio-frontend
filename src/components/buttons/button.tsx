@@ -3,6 +3,7 @@ import { colors } from '../../styles/colors';
 import { baseButtonStyles, buttonStyles } from './buttons-styles';
 import './button.css';
 import { Separator } from '../separator/separator';
+import { LargeLabel } from '../../styles/typography/label';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -13,9 +14,22 @@ interface ButtonProps {
   paddingHorizontal?: number;
   onClick?: () => void;
   expand?: boolean;
+  weight: 'bold' | 'regular' | 'semiBold';
+  color?: keyof typeof colors;
 }
 
-export const Button = ({ children, icon, disable, compact, type, paddingHorizontal, onClick, expand }: ButtonProps) => {
+export const Button = ({
+  children,
+  icon,
+  disable,
+  compact,
+  type,
+  paddingHorizontal,
+  onClick,
+  expand,
+  weight,
+  color,
+}: ButtonProps) => {
   const buttonStyleMapping = {
     primary: {
       ...buttonStyles.primary,
@@ -41,6 +55,9 @@ export const Button = ({ children, icon, disable, compact, type, paddingHorizont
         {!!icon && <span>{icon}</span>}
         <Separator horizontal size={8} />
         <label> {children} </label>
+        <LargeLabel weight={weight} color={color}>
+          {children}
+        </LargeLabel>
       </button>
     </div>
   );

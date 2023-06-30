@@ -26,7 +26,14 @@ export const Hero = () => {
         <Body1 color="NeutralDark">Os melhores imóveis de acordo com as suas preferências.</Body1>
         <Separator vertical size={16} />
         <div className="hero-button">
-          <Button type="primary" compact expand icon={<FontAwesomeIcon icon={faSearch} />} onClick={handleSearchClick}>
+          <Button
+            type="primary"
+            weight="semiBold"
+            compact
+            expand
+            icon={<FontAwesomeIcon icon={faSearch} />}
+            onClick={handleSearchClick}
+          >
             <LargeLabel weight="semiBold" color="NeutralWhite">
               Buscar
             </LargeLabel>

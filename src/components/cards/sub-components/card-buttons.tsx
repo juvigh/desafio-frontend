@@ -7,11 +7,11 @@ import { Separator } from '../../separator/separator';
 export const CardButtons = () => {
   return (
     <div className="buttons">
-      <Button type="cta" expand icon={<FontAwesomeIcon icon={faWhatsapp} />}>
+      <Button type="cta" weight="bold" expand icon={<FontAwesomeIcon icon={faWhatsapp} />}>
         Falar com o corretor
       </Button>
       <Separator vertical size={16} />
-      <Button expand type="primary">
+      <Button expand weight="bold" type="primary">
         Agendar visita
       </Button>
     </div>
