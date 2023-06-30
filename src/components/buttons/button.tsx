@@ -52,9 +52,12 @@ export const Button = ({
   return (
     <div>
       <button className={buttonHover} style={buttonStyle} disabled={disable} onClick={onClick}>
-        {!!icon && <span>{icon}</span>}
-        <Separator horizontal size={8} />
-        <label> {children} </label>
+        {!!icon && (
+          <>
+            <span>{icon}</span>
+            {icon && children && <Separator horizontal size={8} />}
+          </>
+        )}
         <LargeLabel weight={weight} color={color}>
           {children}
         </LargeLabel>
