@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { FooterLinks } from './footer-link';
-import logo from './assets/logo.svg';
+import logo from '../../assets/logo-footer.svg';
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { MediumLabel } from '../../styles/typography/label';
 import { FooterIcons } from './footer-icons';
