@@ -1,15 +1,14 @@
 import React from 'react';
-import './App.css';
-import { Separator } from './components/separator/separator';
-import { CategoryCarousel } from './components/carousel/carousel-section/carrossel-category-section';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/home';
 
 function App() {
   return (
-    <div>
-      <Separator vertical size={8} />
-      <CategoryCarousel />
-      <Separator vertical size={8} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
