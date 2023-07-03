@@ -10,3 +10,14 @@ export const GET_CATEGORIES = gql`
     }
   }
 `;
+
+export interface Category {
+  id: string;
+  name: string;
+  imageUrl: string;
+  numberOfProperties: number;
+}
+
+export interface CategoryData {
+  categories: Category[];
+}
