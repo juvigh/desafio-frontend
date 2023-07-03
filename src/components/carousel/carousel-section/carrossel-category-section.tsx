@@ -1,29 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Category, fetchCategories } from '../../../api/api';
 import { CardCarouselSection } from './card-carousel-section';
 import { CardCategory } from '../../cards/card-category';
+import { fetchCategories } from '../../../api/category-data';
+import { Category } from '../../../api/queries/get-category';
 
 export const CategoryCarousel = () => {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [error, setError] = useState<string>('');
-
-  useEffect(() => {
-    const fetchCategoriesData = async () => {
-      const fetchedCategories = await fetchCategories();
-      setCategories(fetchedCategories);
-    };
-
-    fetchCategoriesData().catch((error) => {
-      console.error('Error fetching categories:', error);
-      setError('Error fetching categories.');
-    });
-  }, []);
+  const { data = [], loading, error } = fetchCategories();
 
   return (
     <>
-      {error || categories.length === 0 ? null : (
+      {loading ? (
+        <div>Carregando...</div>
+      ) : error ? (
+        <div>Ocorreu um erro ao carregar as categorias.</div>
+      ) : data.length === 0 ? (
+        <div>Não há categorias disponíveis.</div>
+      ) : (
         <CardCarouselSection title="Encontre o imóvel ideal para o seu estilo de vida!">
-          {categories.map((category) => (
+          {data.map((category: Category) => (
             <CardCategory
               key={category.id}
               name={category.name}
