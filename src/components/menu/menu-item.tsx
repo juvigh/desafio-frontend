@@ -3,10 +3,10 @@ import { LargeLabel } from '../../styles/typography/label';
 import './menu.css';
 
 interface MenuItemProps {
-  label: string;
+  title: string;
 }
 
-export const MenuItem = ({ label }: MenuItemProps) => {
+export const MenuItem = ({ title }: MenuItemProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = (hovered: boolean) => {
@@ -15,7 +15,7 @@ export const MenuItem = ({ label }: MenuItemProps) => {
 
   return (
     <div className="menu-item" onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(false)}>
-      <LargeLabel weight={isHovered ? 'bold' : 'semiBold'}>{label}</LargeLabel>
+      <LargeLabel color="NeutralXdark" weight={isHovered ? 'bold' : 'semiBold'} title={title} />
     </div>
   );
 };

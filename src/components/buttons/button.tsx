@@ -6,7 +6,7 @@ import { Separator } from '../separator/separator';
 import { LargeLabel } from '../../styles/typography/label';
 
 interface ButtonProps {
-  children: React.ReactNode;
+  title: string;
   type: 'primary' | 'secondary' | 'cta';
   icon?: React.ReactNode;
   disable?: boolean;
@@ -14,12 +14,12 @@ interface ButtonProps {
   paddingHorizontal?: number;
   onClick?: () => void;
   expand?: boolean;
-  weight: 'bold' | 'regular' | 'semiBold';
+  titleWeight?: 'bold' | 'regular' | 'semiBold';
   color?: keyof typeof colors;
 }
 
 export const Button = ({
-  children,
+  title,
   icon,
   disable,
   compact,
@@ -27,7 +27,7 @@ export const Button = ({
   paddingHorizontal,
   onClick,
   expand,
-  weight,
+  titleWeight,
   color,
 }: ButtonProps) => {
   const buttonStyleMapping = {
@@ -55,12 +55,10 @@ export const Button = ({
         {!!icon && (
           <>
             <span>{icon}</span>
-            {icon && children && <Separator horizontal size={8} />}
+            {icon && title && <Separator horizontal size={8} />}
           </>
         )}
-        <LargeLabel weight={weight} color={color}>
-          {children}
-        </LargeLabel>
+        <LargeLabel weight={titleWeight} color={color} title={title} />
       </button>
     </div>
   );

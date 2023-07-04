@@ -10,18 +10,14 @@ export const Menu = () => {
     <div className="menu-container">
       <img src={logo} alt="Logo" />
       <div className="menu-items">
-        <MenuItem label="Home" />
-        <MenuItem label="Quem Somos" />
-        <MenuItem label="Contatos" />
+        <MenuItem title="Home" />
+        <MenuItem title="Quem Somos" />
+        <MenuItem title="Contatos" />
       </div>
       <div className="button-container">
-        <Button compact weight="regular" color="Accessory1" type="secondary">
-          Logar
-        </Button>
+        <Button compact titleWeight="regular" title="Logar" color="Accessory1" type="secondary" />
         <Separator horizontal size={8} />
-        <Button compact weight="bold" color="NeutralWhite" type="primary">
-          Cadastrar
-        </Button>
+        <Button compact titleWeight="bold" title="Cadastrar" color="NeutralWhite" type="primary" />
       </div>
     </div>
   );
