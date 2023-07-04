@@ -1,6 +1,6 @@
 import { CardCarouselSection } from './card-carousel-section';
 import { CardCategory } from '../../cards/card-category';
-import { fetchCategories } from '../../../api/category-data';
+import { fetchCategories } from '../../../api/fetch-categories';
 import { Category } from '../../../api/queries/get-category';
 
 export const CategoryCarousel = () => {
