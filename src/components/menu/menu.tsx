@@ -4,10 +4,11 @@ import logo from '../../assets/logo-header.svg';
 import './menu.css';
 import { Separator } from '../separator/separator';
 import { MenuItem } from './menu-item';
+import { MenuContainer } from './menu-styles';
 
 export const Menu = () => {
   return (
-    <div className="menu-container">
+    <div className="menu-container" style={MenuContainer}>
       <img src={logo} alt="Logo" />
       <div className="menu-items">
         <MenuItem title="Home" />

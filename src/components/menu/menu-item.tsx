@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LargeLabel } from '../../styles/typography/label';
-import './menu.css';
+import { MenuItemStyles } from './menu-styles';
+import { colors } from '../../styles/colors';
 
 interface MenuItemProps {
   title: string;
@@ -14,7 +15,14 @@ export const MenuItem = ({ title }: MenuItemProps) => {
   };
 
   return (
-    <div className="menu-item" onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(false)}>
+    <div
+      style={{
+        ...MenuItemStyles,
+        borderBottom: `5px solid ${isHovered ? colors.CTA : colors.NeutralWhite}`,
+      }}
+      onMouseEnter={() => handleHover(true)}
+      onMouseLeave={() => handleHover(false)}
+    >
       <LargeLabel color="NeutralXdark" weight={isHovered ? 'bold' : 'semiBold'} title={title} />
     </div>
   );
