@@ -52,6 +52,7 @@ export const CardProperty = ({
           {formatPrice(price)}
         </Price>
         <FontAwesomeIcon
+          color="#8E8E8E"
           icon={isHearted ? faHeartSolid : faHeartRegular}
           className={isHearted ? 'hearted' : ''}
           onClick={handleHeartClick}
