@@ -3,12 +3,12 @@ import { colors } from '../colors';
 import { typography } from './typography';
 
 interface LargeLabelProps {
-  title: string;
+  children: React.ReactNode;
   weight?: 'regular' | 'bold' | 'semiBold';
   color?: keyof typeof colors;
 }
 
-export const LargeLabel = ({ title, weight, color }: LargeLabelProps) => {
+export const LargeLabel = ({ children, weight, color }: LargeLabelProps) => {
   let fontWeight;
   if (weight === 'regular') {
     fontWeight = typography.weight.regular;
@@ -26,7 +26,7 @@ export const LargeLabel = ({ title, weight, color }: LargeLabelProps) => {
         color: color ? colors[color] : colors.PrimaryXdark,
       }}
     >
-      {title}
+      {children}
     </label>
   );
 };
