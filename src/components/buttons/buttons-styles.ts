@@ -5,7 +5,6 @@ export const baseButtonStyles = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  minWidth: '143px',
   borderRadius: typography.border.radius,
   padding: `0 ${typography.size.large}`,
   cursor: 'pointer',

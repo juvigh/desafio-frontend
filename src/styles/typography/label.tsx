@@ -4,7 +4,7 @@ import { typography } from './typography';
 
 interface LargeLabelProps {
   children: React.ReactNode;
-  weight: 'regular' | 'bold' | 'semiBold';
+  weight?: 'regular' | 'bold' | 'semiBold';
   color?: keyof typeof colors;
 }
 

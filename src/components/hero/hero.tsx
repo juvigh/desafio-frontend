@@ -4,7 +4,6 @@ import { Body1 } from '../../styles/typography/body-1';
 import { Button } from '../buttons/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { LargeLabel } from '../../styles/typography/label';
 import './hero.css';
 import picture from '../../assets/picture.svg';
 import { Separator } from '../separator/separator';
@@ -26,11 +25,15 @@ export const Hero = () => {
         <Body1 color="NeutralDark">Os melhores imóveis de acordo com as suas preferências.</Body1>
         <Separator vertical size={16} />
         <div className="hero-button">
-          <Button type="primary" compact expand icon={<FontAwesomeIcon icon={faSearch} />} onClick={handleSearchClick}>
-            <LargeLabel weight="semiBold" color="NeutralWhite">
-              Buscar
-            </LargeLabel>
-          </Button>
+          <Button
+            type="primary"
+            titleWeight="bold"
+            compact
+            expand
+            icon={<FontAwesomeIcon icon={faSearch} />}
+            onClick={handleSearchClick}
+            title="Buscar"
+          />
         </div>
       </div>
     </section>
