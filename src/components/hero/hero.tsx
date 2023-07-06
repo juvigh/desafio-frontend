@@ -28,7 +28,7 @@ export const Hero = () => {
         <div className="hero-button">
           <Button
             type="primary"
-            weight="semiBold"
+            titleWeight="bold"
             compact
             expand
             icon={<FontAwesomeIcon icon={faSearch} />}

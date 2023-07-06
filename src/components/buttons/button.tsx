@@ -14,8 +14,8 @@ interface ButtonProps {
   paddingHorizontal?: number;
   onClick?: () => void;
   expand?: boolean;
-  titleWeight?: 'bold' | 'regular' | 'semiBold';
   color?: keyof typeof colors;
+  titleWeight?: 'bold' | 'regular';
 }
 
 export const Button = ({
