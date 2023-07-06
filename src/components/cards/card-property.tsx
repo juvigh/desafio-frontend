@@ -1,8 +1,3 @@
-const formatPrice = (price: number) => {
-  const formattedPrice = (price / 100).toFixed(2);
-  return `R$ ${formattedPrice}`;
-};
-
 import { Body2 } from '../../styles/typography/body-2';
 import './cards.css';
 import { FacilitiesProperty } from './facilities-property';
@@ -13,6 +8,7 @@ import { Price } from '../../styles/typography/prices';
 import { Caption } from '../../styles/typography/caption';
 import { useState } from 'react';
 import { CardContainer } from './sub-components/card-container';
+import { formatPrice } from '../../utils/formatPrice';
 
 export interface CardPropertyProps {
   image: string;
