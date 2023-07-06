@@ -11,26 +11,40 @@ import { CardContainer } from './sub-components/card-container';
 import { formatPrice } from '../../utils/formatPrice';
 
 export interface CardPropertyProps {
-  image: string;
-  title: string;
-  description: string;
+  image: string[];
+  streetNumber: string;
+  district: string;
+  city: string;
+  state: string;
   price: number;
   beds: number;
   bath: number;
   dimension: string;
 }
 
-export const CardProperty = ({ image, title, description, price, beds, bath, dimension }: CardPropertyProps) => {
+export const CardProperty = ({
+  image,
+  price,
+  beds,
+  bath,
+  dimension,
+  streetNumber,
+  district,
+  city,
+  state,
+}: CardPropertyProps) => {
   const [isHearted, setIsHearted] = useState(false);
 
   const handleHeartClick = () => {
     setIsHearted(!isHearted);
   };
 
+  const propertyImage = image.length > 0 ? image[0] : '';
+
   return (
     <CardContainer>
       <div className="property-image-container">
-        <img src={image} alt={title} />
+        <img src={propertyImage} alt="property-imovel" />
       </div>
 
       <div className="price-container">
@@ -44,8 +58,12 @@ export const CardProperty = ({ image, title, description, price, beds, bath, dim
         />
       </div>
       <div className="description-container">
-        <Body2 weight="bold"> {title}</Body2>
-        <Caption>{description}</Caption>
+        <Body2 weight="bold">
+          {city}, {state}
+        </Body2>
+        <Caption opacity={0.5}>
+          {district}, {streetNumber}, {city}
+        </Caption>
       </div>
       <FacilitiesProperty beds={beds} bath={bath} dimensions={dimension} />
     </CardContainer>
