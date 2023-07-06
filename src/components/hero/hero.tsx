@@ -4,7 +4,6 @@ import { Body1 } from '../../styles/typography/body-1';
 import { Button } from '../buttons/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { LargeLabel } from '../../styles/typography/label';
 import './hero.css';
 import picture from '../../assets/picture.svg';
 import { Separator } from '../separator/separator';
@@ -33,11 +32,8 @@ export const Hero = () => {
             expand
             icon={<FontAwesomeIcon icon={faSearch} />}
             onClick={handleSearchClick}
-          >
-            <LargeLabel weight="semiBold" color="NeutralWhite">
-              Buscar
-            </LargeLabel>
-          </Button>
+            title="Buscar"
+          />
         </div>
       </div>
     </section>
