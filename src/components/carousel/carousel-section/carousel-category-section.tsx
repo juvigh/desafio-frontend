@@ -2,19 +2,20 @@ import { CardCarouselSection } from './card-carousel-section';
 import { CardCategory } from '../../cards/card-category';
 import { fetchCategories } from '../../../api/fetch-categories';
 import { Category } from '../../../api/queries/get-category';
+import { LoadingError } from '../../loading/loading-error';
 
 export const CategoryCarousel = () => {
   const { data = [], loading, error } = fetchCategories();
 
   return (
     <>
-      {loading ? (
-        <div>Carregando...</div>
-      ) : error ? (
-        <div>Ocorreu um erro ao carregar as categorias.</div>
-      ) : data.length === 0 ? (
-        <div>Não há categorias disponíveis.</div>
-      ) : (
+      <LoadingError
+        loading={loading}
+        error={error}
+        emptyMessage="Não há categorias disponíveis."
+        dataLength={data.length}
+      />
+      {!loading && !error && data.length > 0 && (
         <CardCarouselSection title="Encontre o imóvel ideal para o seu estilo de vida!">
           {data.map((category: Category) => (
             <CardCategory
