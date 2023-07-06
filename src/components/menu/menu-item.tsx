@@ -23,7 +23,9 @@ export const MenuItem = ({ title }: MenuItemProps) => {
       onMouseEnter={() => handleHover(true)}
       onMouseLeave={() => handleHover(false)}
     >
-      <LargeLabel color="NeutralXdark" weight={isHovered ? 'bold' : 'semiBold'} title={title} />
+      <LargeLabel color="NeutralXdark" weight={isHovered ? 'bold' : 'semiBold'}>
+        {title}
+      </LargeLabel>
     </div>
   );
 };

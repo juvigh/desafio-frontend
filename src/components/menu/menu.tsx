@@ -16,9 +16,9 @@ export const Menu = () => {
         <MenuItem title="Contatos" />
       </div>
       <div className="button-container">
-        <Button compact titleWeight="regular" title="Logar" color="Accessory1" type="secondary" />
+        <Button compact titleWeight="regular" title="Logar" type="secondary" />
         <Separator horizontal size={8} />
-        <Button compact titleWeight="bold" title="Cadastrar" color="NeutralWhite" type="primary" />
+        <Button compact titleWeight="bold" title="Cadastrar" type="primary" />
       </div>
     </div>
   );

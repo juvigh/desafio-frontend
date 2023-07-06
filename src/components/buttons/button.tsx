@@ -14,7 +14,6 @@ interface ButtonProps {
   paddingHorizontal?: number;
   onClick?: () => void;
   expand?: boolean;
-  color?: keyof typeof colors;
   titleWeight?: 'bold' | 'regular';
 }
 
@@ -28,7 +27,6 @@ export const Button = ({
   onClick,
   expand,
   titleWeight,
-  color,
 }: ButtonProps) => {
   const buttonStyleMapping = {
     primary: {
@@ -48,6 +46,7 @@ export const Button = ({
   };
 
   const buttonHover = type === 'primary' && !disable ? 'primary-button' : '';
+  const colorButtom = type === 'secondary' ? 'Accessory1' : 'NeutralWhite';
 
   return (
     <div>
@@ -58,7 +57,9 @@ export const Button = ({
             {icon && title && <Separator horizontal size={8} />}
           </>
         )}
-        <LargeLabel weight={titleWeight} color={color} title={title} />
+        <LargeLabel weight={titleWeight} color={colorButtom}>
+          {title}
+        </LargeLabel>
       </button>
     </div>
   );
