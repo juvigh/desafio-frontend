@@ -9,13 +9,7 @@ export const PropertyCarousel = () => {
 
   return (
     <>
-      <LoadingError
-        loading={loading}
-        error={error}
-        emptyMessage="Não há lançamentos disponíveis."
-        dataLength={data.length}
-      />
-      {!loading && !error && data.length > 0 && (
+      <LoadingError loading={loading} error={!!error} emptyMessage="Não há lançamentos disponíveis." data={!!data}>
         <CardCarouselSection title="Lançamentos que você pode se interessar!">
           <CardProperty
             key={property.id}
@@ -30,7 +24,7 @@ export const PropertyCarousel = () => {
             city={property.address.city}
           />
         </CardCarouselSection>
-      )}
+      </LoadingError>
     </>
   );
 };

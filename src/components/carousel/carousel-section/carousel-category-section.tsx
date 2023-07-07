@@ -9,13 +9,7 @@ export const CategoryCarousel = () => {
 
   return (
     <>
-      <LoadingError
-        loading={loading}
-        error={error}
-        emptyMessage="Não há categorias disponíveis."
-        dataLength={data.length}
-      />
-      {!loading && !error && data.length > 0 && (
+      <LoadingError loading={loading} error={!!error} emptyMessage="Não há categorias disponíveis." data={!!data}>
         <CardCarouselSection title="Encontre o imóvel ideal para o seu estilo de vida!">
           {data.map((category: Category) => (
             <CardCategory
@@ -26,7 +20,7 @@ export const CategoryCarousel = () => {
             />
           ))}
         </CardCarouselSection>
-      )}
+      </LoadingError>
     </>
   );
 };
