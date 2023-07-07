@@ -12,12 +12,12 @@ export const CarouselCard = ({ children }: { children: React.ReactNode }) => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 2.3,
       slidesToSlide: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 1.3,
       slidesToSlide: 1,
     },
   };
