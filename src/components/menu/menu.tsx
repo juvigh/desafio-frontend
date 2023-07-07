@@ -11,9 +11,9 @@ export const Menu = () => {
     <div className="menu-container" style={MenuContainer}>
       <img src={logo} alt="Logo" />
       <div className="menu-items">
-        <MenuItem title="Home" />
-        <MenuItem title="Quem Somos" />
-        <MenuItem title="Contatos" />
+        <MenuItem title="Home" path="/" />
+        <MenuItem title="Quem Somos" path="/about-us" />
+        <MenuItem title="Contatos" path="/contact" />
       </div>
       <div className="button-container">
         <Button compact titleWeight="regular" title="Logar" type="secondary" />

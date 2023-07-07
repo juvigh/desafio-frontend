@@ -1,0 +1,12 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero, .banner {
+    margin: 20px 60px;
+}
+
+.category-carousel {
+    margin-left: 60px;
+}
