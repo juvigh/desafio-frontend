@@ -1,21 +1,23 @@
 import React from 'react';
-import { ApolloError } from '@apollo/client';
 
 interface LoadingErrorProps {
   loading: boolean;
-  error?: ApolloError;
+  error: boolean;
   emptyMessage: string;
-  dataLength: number;
+  data: boolean;
+  children: React.ReactNode;
 }
 
-export const LoadingError = ({ loading, error, emptyMessage, dataLength }: LoadingErrorProps) => (
+export const LoadingError = ({ loading, error, emptyMessage, data, children }: LoadingErrorProps) => (
   <>
     {loading ? (
       <div>Carregando...</div>
     ) : error ? (
       <div>Ocorreu um erro ao carregar.</div>
-    ) : dataLength === 0 ? (
+    ) : !data ? (
       <div>{emptyMessage}</div>
-    ) : null}
+    ) : (
+      children
+    )}
   </>
 );
