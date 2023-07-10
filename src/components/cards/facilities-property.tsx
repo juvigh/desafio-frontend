@@ -27,7 +27,7 @@ export const FacilitiesProperty = ({ beds, bath, dimensions }: FacilitiesProps) 
       <div className="facility-item">
         <FontAwesomeIcon icon={faRuler} />
         <Separator horizontal size={4} />
-        <Caption>{dimensions} m²</Caption>
+        <Caption>{dimensions}</Caption>
         <Separator horizontal size={4} />
       </div>
     </div>

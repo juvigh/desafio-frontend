@@ -36,7 +36,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 12px;
+}
+
+.price-container > svg {
+  font-size: 20px;
 }
 
 .description-container {

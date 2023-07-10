@@ -29,6 +29,7 @@ export const Price = ({ size, children, color }: PriceProps) => {
         fontSize,
         fontWeight,
         color: color ? colors[color] : colors.NeutralXdark,
+        margin: 0,
       }}
     >
       {children}

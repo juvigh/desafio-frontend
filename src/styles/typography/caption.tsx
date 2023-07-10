@@ -4,10 +4,13 @@ import { colors } from '../colors';
 
 interface CaptionProps {
   color?: keyof typeof colors;
+  opacity?: number;
   children: React.ReactNode;
 }
 
-export const Caption = ({ children, color }: CaptionProps) => {
+export const Caption = ({ children, color, opacity }: CaptionProps) => {
+  const opacityValue = opacity ? `${opacity * 100}%` : '100%';
+
   return (
     <p
       style={{
@@ -15,6 +18,7 @@ export const Caption = ({ children, color }: CaptionProps) => {
         fontSize: typography.size.small,
         fontWeight: typography.weight.regular,
         color: color ? colors[color] : colors.NeutralXdark,
+        opacity: opacityValue,
       }}
     >
       {children}
