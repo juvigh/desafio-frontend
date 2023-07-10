@@ -40,7 +40,7 @@ export const CardProperty = ({
     setIsHearted(!isHearted);
   };
 
-  const propertyImage = image.length > 0 ? image[0] : '';
+  const propertyImage = image?.[0] ?? '';
 
   return (
     <CardContainer>
