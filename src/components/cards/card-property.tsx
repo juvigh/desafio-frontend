@@ -60,12 +60,8 @@ export const CardProperty = ({
         />
       </div>
       <div className="description-container">
-        <Body2 weight="bold">
-          {city}, {state}
-        </Body2>
-        <Caption opacity={0.5}>
-          {district}, {streetNumber}, {city}
-        </Caption>
+        <Body2 weight="bold">{`${city}, ${state}`}</Body2>
+        <Caption opacity={0.5}>{`${district}, ${streetNumber}, ${city}`}</Caption>
       </div>
       <FacilitiesProperty beds={beds} bath={bath} dimensions={dimension} />
     </CardContainer>
