@@ -9,6 +9,7 @@ import { Caption } from '../../styles/typography/caption';
 import { useState } from 'react';
 import { CardContainer } from './sub-components/card-container';
 import { formatPrice } from '../../utils/formatPrice';
+import { colors } from '../../styles/colors';
 
 export interface CardPropertyProps {
   image: string[];
@@ -52,7 +53,7 @@ export const CardProperty = ({
           {formatPrice(price)}
         </Price>
         <FontAwesomeIcon
-          color="#8E8E8E"
+          color={`${colors.NeutralMedium}`}
           icon={isHearted ? faHeartSolid : faHeartRegular}
           className={isHearted ? 'hearted' : ''}
           onClick={handleHeartClick}
