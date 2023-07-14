@@ -16,6 +16,7 @@ export const H2 = ({ children, color }: H2Props) => {
         fontWeight: typography.weight.regular,
         color: color ? colors[color] : colors.PrimaryDark,
         lineHeight: typography.lineHeight.medium,
+        margin: 0,
       }}
     >
       {children}

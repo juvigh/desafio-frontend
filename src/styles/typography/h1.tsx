@@ -11,6 +11,7 @@ export const H1 = ({ children }: { children: React.ReactNode }) => {
         fontWeight: typography.weight.semiBold,
         color: colors.PrimaryDark,
         lineHeight: typography.lineHeight.large,
+        margin: 0,
       }}
     >
       {children}
