@@ -17,6 +17,8 @@ export const GET_PROPERTY = gql`
       bedrooms
       bathrooms
       area
+      availableOnProperty
+      availableOnCondominium
     }
   }
 `;
@@ -36,6 +38,8 @@ export interface Property {
   bedrooms: number;
   bathrooms: number;
   area: string;
+  availableOnProperty: string[];
+  availableOnCondominium: string[];
 }
 
 export interface PropertyData {
