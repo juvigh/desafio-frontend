@@ -14,7 +14,7 @@ export const H4 = ({ children, color, weight }: H4Props) => {
       style={{
         fontFamily: typography.family.primary,
         fontSize: typography.size.large,
-        fontWeight: typography.weight[weight === 'semiBold' ? 'semiBold' : 'extraBold'],
+        fontWeight: typography.weight[weight],
         color: color ? colors[color] : colors.PrimaryDark,
         margin: 0,
       }}
