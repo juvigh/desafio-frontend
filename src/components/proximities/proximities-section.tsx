@@ -15,6 +15,7 @@ import { Body2 } from '../../styles/typography/body-2';
 import { colors } from '../../styles/colors';
 import { H3 } from '../../styles/typography/h3';
 import { Separator } from '../separator/separator';
+import { ProximitiesMap } from './proximities-map';
 
 const proximityIcons: { [key: string]: IconDefinition } = {
   WellRatedRestaurants: faUtensils,
@@ -32,9 +33,11 @@ export interface Proximity {
 
 interface ProximitiesSectionProps {
   proximities: Proximity[];
+  latitude: number;
+  longitude: number;
 }
 
-export const ProximitiesSection = ({ proximities }: ProximitiesSectionProps) => {
+export const ProximitiesSection = ({ proximities, latitude, longitude }: ProximitiesSectionProps) => {
   return (
     <section className="proximities-section">
       <div className="proximity-text">
@@ -49,6 +52,10 @@ export const ProximitiesSection = ({ proximities }: ProximitiesSectionProps) => 
             <Body2 weight="regular">{proximity.description}</Body2>
           </div>
         ))}
+      </div>
+      <Separator horizontal size={20} />
+      <div className="proximity-map">
+        <ProximitiesMap latitude={latitude} longitude={longitude} />
       </div>
     </section>
   );
