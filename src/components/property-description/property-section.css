@@ -1,8 +1,7 @@
 .container-info {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding-right: 76px;
+  flex: 2;
 }
 
 .container-sub-title {
