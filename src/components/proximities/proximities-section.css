@@ -1,5 +1,6 @@
 .proximities-section {
     display: flex;
+    gap: 32px;
 }
 
 .proximity-title {

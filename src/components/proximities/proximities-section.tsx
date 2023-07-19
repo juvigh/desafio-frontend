@@ -53,7 +53,6 @@ export const ProximitiesSection = ({ proximities, latitude, longitude }: Proximi
           </div>
         ))}
       </div>
-      <Separator horizontal size={20} />
       <div className="proximity-map">
         <ProximitiesMap latitude={latitude} longitude={longitude} />
       </div>
