@@ -16,14 +16,15 @@ import { colors } from '../../styles/colors';
 import { H3 } from '../../styles/typography/h3';
 import { Separator } from '../separator/separator';
 import { ProximitiesMap } from './proximities-map';
+import { ProximitiesItemTitle } from './proximities-enum';
 
-const proximityIcons: { [key: string]: IconDefinition } = {
-  WellRatedRestaurants: faUtensils,
-  GreenAreas: faTree,
-  Schools: faSchool,
-  Colleges: faUniversity,
-  Hospitals: faHospital,
-  Markets: faStore,
+const proximityIcons: { [key in ProximitiesItemTitle]: IconDefinition } = {
+  [ProximitiesItemTitle.WellRatedRestaurants]: faUtensils,
+  [ProximitiesItemTitle.GreenAreas]: faTree,
+  [ProximitiesItemTitle.Schools]: faSchool,
+  [ProximitiesItemTitle.Colleges]: faUniversity,
+  [ProximitiesItemTitle.Hospitals]: faHospital,
+  [ProximitiesItemTitle.Markets]: faStore,
 };
 
 export interface Proximity {
