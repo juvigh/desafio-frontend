@@ -1,4 +1,5 @@
 import React from 'react';
+import { API_KEY } from '../../config/keys';
 
 interface ProximitiesMapProps {
   latitude: number;
@@ -10,7 +11,7 @@ export const ProximitiesMap = ({ latitude, longitude }: ProximitiesMapProps) => 
     <iframe
       loading="lazy"
       allowFullScreen
-      src={`https://www.google.com/maps/embed/v1/view?key=AIzaSyDFqcjwssTsHGkqm0V2cVmRCNUhfOhxr4I&center=${latitude},${longitude}&zoom=15`}
+      src={`https://www.google.com/maps/embed/v1/view?key=${API_KEY}&center=${latitude},${longitude}&zoom=15`}
     ></iframe>
   );
 };
