@@ -42,7 +42,7 @@ export const ProximitiesSection = ({ proximities, latitude, longitude }: Proximi
   return (
     <section className="proximities-section">
       <div className="proximity-text">
-        <H2 color="NeutralXdark"> Proximidades </H2>
+        <H2 color="NeutralXdark">Proximidades</H2>
         {proximities.map((proximity, index) => (
           <div key={index}>
             <div className="proximity-title">
