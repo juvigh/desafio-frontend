@@ -12,15 +12,16 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { fetchProperties } from '../../api/fetch-properties';
 import { LoadingError } from '../loading/loading-error';
+import { CondominiumItemTitle } from './items-enums';
 
-const condominiumItemsIcons: { [key: string]: IconDefinition } = {
-  Pool: faSwimmingPool,
-  Playground: faPlay,
-  Concierge: faConciergeBell,
-  Elevator: faElevator,
-  SportsCourt: faVolleyballBall,
-  Loundry: faTshirt,
-  Furniture: faCouch,
+const condominiumItemsIcons: { [key in CondominiumItemTitle]: IconDefinition } = {
+  [CondominiumItemTitle.Pool]: faSwimmingPool,
+  [CondominiumItemTitle.Playground]: faPlay,
+  [CondominiumItemTitle.Concierge]: faConciergeBell,
+  [CondominiumItemTitle.Elevator]: faElevator,
+  [CondominiumItemTitle.SportsCourt]: faVolleyballBall,
+  [CondominiumItemTitle.Loundry]: faTshirt,
+  [CondominiumItemTitle.Furniture]: faCouch,
 };
 
 export const CondominiumItems = () => {
@@ -29,7 +30,7 @@ export const CondominiumItems = () => {
   const availableCondominiumItems = data.flatMap((property) => property.availableOnCondominium);
 
   const items = Object.entries(condominiumItemsIcons).map(([title]) => ({
-    title,
+    title: title as CondominiumItemTitle,
     active: availableCondominiumItems.includes(title),
   }));
   return (
