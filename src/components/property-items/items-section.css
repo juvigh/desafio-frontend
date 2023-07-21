@@ -1,0 +1,13 @@
+.items-columns {
+    display: flex;
+}
+
+.items-column {
+    flex: 1;
+}
+
+.item {
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+}
