@@ -6,7 +6,7 @@ import { LoadingError } from '../loading/loading-error';
 import { fetchProperties } from '../../api/fetch-properties';
 import { PropertyItemTitle } from './items-enums';
 
-const propertyItemsIcons: { [key in PropertyItemTitle]: IconDefinition } = {
+const propertyItemsIcons: Record<PropertyItemTitle, IconDefinition> = {
   [PropertyItemTitle.AmericanKitchen]: faUtensils,
   [PropertyItemTitle.Garden]: faTree,
   [PropertyItemTitle.Garage]: faCar,

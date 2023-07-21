@@ -14,7 +14,7 @@ import { fetchProperties } from '../../api/fetch-properties';
 import { LoadingError } from '../loading/loading-error';
 import { CondominiumItemTitle } from './items-enums';
 
-const condominiumItemsIcons: { [key in CondominiumItemTitle]: IconDefinition } = {
+const condominiumItemsIcons: Record<CondominiumItemTitle, IconDefinition> = {
   [CondominiumItemTitle.Pool]: faSwimmingPool,
   [CondominiumItemTitle.Playground]: faPlay,
   [CondominiumItemTitle.Concierge]: faConciergeBell,
