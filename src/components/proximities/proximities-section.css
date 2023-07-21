@@ -1,0 +1,21 @@
+.proximities-section {
+    display: flex;
+    gap: 32px;
+}
+
+.proximity-title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.proximity-map {
+    flex: 1;
+}
+
+.proximity-map > iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}

@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client';
+import { Proximity } from '../../components/proximities/proximities-section';
 
 export const GET_PROPERTY = gql`
   query RecentProperties {
@@ -10,6 +11,8 @@ export const GET_PROPERTY = gql`
         district
         city
         state
+        latitude
+        longitude
       }
       buyPrices {
         total
@@ -19,6 +22,10 @@ export const GET_PROPERTY = gql`
       area
       availableOnProperty
       availableOnCondominium
+      proximities {
+        type
+        description
+      }
     }
   }
 `;
@@ -31,6 +38,8 @@ export interface Property {
     district: string;
     city: string;
     state: string;
+    latitude: number;
+    longitude: number;
   };
   buyPrices: {
     total: number;
@@ -40,6 +49,7 @@ export interface Property {
   area: string;
   availableOnProperty: string[];
   availableOnCondominium: string[];
+  proximities: Proximity[];
 }
 
 export interface PropertyData {
