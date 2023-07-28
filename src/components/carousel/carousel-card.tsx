@@ -3,11 +3,16 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './carousel.css';
 
-export const CarouselCard = ({ children }: { children: React.ReactNode }) => {
+interface CarouselCardProps {
+  property?: boolean;
+  children: React.ReactNode;
+}
+
+export const CarouselCard = ({ children, property }: CarouselCardProps) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4.3,
+      items: property ? 3.9 : 4.3,
       slidesToSlide: 3,
     },
     tablet: {
