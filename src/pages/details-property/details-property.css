@@ -1,0 +1,15 @@
+.container-details {
+  margin: 24px 60px 64px 60px;
+}
+
+.description {
+  display: flex;
+  gap: 60px;
+  margin: 20px 0;
+}
+
+.items-property {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
