@@ -11,7 +11,7 @@ export const CardButtons = () => {
         type="cta"
         titleWeight="bold"
         expand
-        icon={<FontAwesomeIcon icon={faWhatsapp} />}
+        icon={<FontAwesomeIcon icon={faWhatsapp} size="2x" />}
         title="Falar com o corretor"
       />
 
