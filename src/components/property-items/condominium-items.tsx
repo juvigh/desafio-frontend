@@ -10,9 +10,9 @@ import {
   faTshirt,
   faVolleyballBall,
 } from '@fortawesome/free-solid-svg-icons';
-import { fetchProperties } from '../../api/fetch-properties';
 import { LoadingError } from '../loading/loading-error';
 import { CondominiumItemTitle } from './items-enums';
+import { fetchPropertyDetails } from '../../api/fetch-property-details';
 
 const condominiumItemsIcons: Record<CondominiumItemTitle, IconDefinition> = {
   [CondominiumItemTitle.Pool]: faSwimmingPool,
@@ -24,18 +24,23 @@ const condominiumItemsIcons: Record<CondominiumItemTitle, IconDefinition> = {
   [CondominiumItemTitle.Furniture]: faCouch,
 };
 
-export const CondominiumItems = () => {
-  const { data = [], loading, error } = fetchProperties();
+interface CondominiumItemsProps {
+  propertyDetailsId?: string;
+}
 
-  const availableCondominiumItems = data.flatMap((property) => property.availableOnCondominium);
+export const CondominiumItems = ({ propertyDetailsId }: CondominiumItemsProps) => {
+  const { data, loading, error } = fetchPropertyDetails(propertyDetailsId);
+
+  const availableCondominiumItems = data?.availableOnCondominium ?? [];
 
   const items = Object.entries(condominiumItemsIcons).map(([title]) => ({
     title: title as CondominiumItemTitle,
     active: availableCondominiumItems.includes(title),
   }));
+
   return (
     <LoadingError loading={loading} error={!!error} emptyMessage="Não há items" data={!!data}>
-      <ItemsSection title="Disponível no condomínio" items={items} icons={condominiumItemsIcons} />;
+      <ItemsSection title="Disponível no condomínio" items={items} icons={condominiumItemsIcons} />
     </LoadingError>
   );
 };
