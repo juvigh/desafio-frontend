@@ -1,9 +1,16 @@
 import React from 'react';
 import './divider.css';
 
-export const Divider = () => {
+interface DividerProps {
+  width?: string;
+  spacing?: string;
+}
+
+export const Divider = ({ width, spacing }: DividerProps) => {
+  const containerStyle = spacing ? { paddingInline: spacing } : {};
+
   return (
-    <div className="container-divider">
+    <div style={{ width, ...containerStyle }}>
       <hr className="divider" />
     </div>
   );
