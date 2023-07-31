@@ -7,9 +7,9 @@ import { Caption } from '../../../styles/typography/caption';
 
 interface ContactProps {
   image: string;
-  name: string;
-  workplace: string;
-  address: string;
+  name?: string;
+  workplace?: string;
+  address?: string;
 }
 
 export const CardContact = ({ image, name, workplace, address }: ContactProps) => {

@@ -4,7 +4,7 @@ import { Body2 } from '../../../styles/typography/body-2';
 
 interface InfoItemProps {
   label: string;
-  value: string | number;
+  value?: number | string;
   mediumPrice?: boolean;
 }
 

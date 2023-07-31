@@ -2,7 +2,7 @@ import React from 'react';
 import { Price } from '../../../styles/typography/prices';
 
 interface CardHeaderProps {
-  title: string;
+  title?: string;
 }
 
 export const CardHeader = ({ title }: CardHeaderProps) => {

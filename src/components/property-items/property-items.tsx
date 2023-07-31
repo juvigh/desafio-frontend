@@ -3,8 +3,8 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faCar, faCouch, faShower, faSwimmingPool, faTree, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { ItemsSection } from './items-section';
 import { LoadingError } from '../loading/loading-error';
-import { fetchProperties } from '../../api/fetch-properties';
 import { PropertyItemTitle } from './items-enums';
+import { fetchPropertyDetails } from '../../api/fetch-property-details';
 
 const propertyItemsIcons: Record<PropertyItemTitle, IconDefinition> = {
   [PropertyItemTitle.AmericanKitchen]: faUtensils,
@@ -15,10 +15,14 @@ const propertyItemsIcons: Record<PropertyItemTitle, IconDefinition> = {
   [PropertyItemTitle.Furniture]: faCouch,
 };
 
-export const PropertyItems = () => {
-  const { data = [], loading, error } = fetchProperties();
+interface PropertyItemsProps {
+  propertyDetailsId?: string;
+}
 
-  const availablePropertyItems = data.flatMap((property) => property.availableOnProperty);
+export const PropertyItems = ({ propertyDetailsId }: PropertyItemsProps) => {
+  const { data, loading, error } = fetchPropertyDetails(propertyDetailsId);
+
+  const availablePropertyItems = data?.availableOnProperty ?? [];
 
   const items = Object.entries(propertyItemsIcons).map(([title]) => ({
     title: title as PropertyItemTitle,

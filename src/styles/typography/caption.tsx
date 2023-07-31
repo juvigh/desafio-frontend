@@ -19,6 +19,7 @@ export const Caption = ({ children, color, opacity }: CaptionProps) => {
         fontWeight: typography.weight.regular,
         color: color ? colors[color] : colors.NeutralXdark,
         opacity: opacityValue,
+        margin: 0,
       }}
     >
       {children}

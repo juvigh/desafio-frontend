@@ -3,11 +3,11 @@ import './property-section.css';
 import { faBath, faBed, faCar, faRuler, faSwimmingPool } from '@fortawesome/free-solid-svg-icons';
 
 interface PropertyInfoSectionProps {
-  bedroom: number;
-  bathroom: number;
-  pool: boolean;
-  garage: boolean;
-  area: string;
+  bedroom?: number;
+  bathroom?: number;
+  pool?: boolean;
+  garage?: boolean;
+  area?: string;
 }
 
 export const PropertyInfoSection = ({ bedroom, bathroom, pool, garage, area }: PropertyInfoSectionProps) => {

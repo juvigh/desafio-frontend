@@ -47,7 +47,8 @@
 .description-container {
   display: flex;
   flex-direction: column;
-  padding: 0 12px;
+  padding: 0 12px 12px 12px;
+  gap: 4px;
 }
 
 .facilities-container {
@@ -61,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 4px;
+  padding: 8px 4px;
 }
 
 .facility-item > p {

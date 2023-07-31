@@ -24,6 +24,7 @@ export const LargeLabel = ({ children, weight, color }: LargeLabelProps) => {
         fontSize: typography.size.large,
         fontWeight: fontWeight,
         color: color ? colors[color] : colors.PrimaryXdark,
+        margin: 0,
       }}
     >
       {children}

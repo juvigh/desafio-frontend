@@ -7,14 +7,15 @@ import './card-carousel-section.css';
 interface CardCarouselSectionProps {
   title: string;
   children: React.ReactNode;
+  property?: boolean;
 }
 
-export const CardCarouselSection = ({ title, children }: CardCarouselSectionProps) => {
+export const CardCarouselSection = ({ title, children, property }: CardCarouselSectionProps) => {
   return (
     <section className="carousel-section">
       <H2 color="NeutralXdark">{title}</H2>
       <Separator vertical size={2} />
-      <CarouselCard> {children} </CarouselCard>
+      <CarouselCard property={property}> {children} </CarouselCard>
     </section>
   );
 };

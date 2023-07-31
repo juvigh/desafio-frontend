@@ -8,7 +8,7 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 interface PropertyInfoProps {
   icon: IconDefinition;
-  title: string;
+  title?: string;
   number?: number;
 }
 
